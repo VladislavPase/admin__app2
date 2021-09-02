@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Потоки</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body streams">
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
+          <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-finance-accounting icon"></i>Финансовый отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-settings icon"></i>Настройки</a></li>
+          </ul>
+          <h3 class="sidebar__title">ДРУГОЕ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="faq.html"><i class="icon-faq icon"></i>FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="page-content">
+        <header class="header">
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__name"><span class="profile-name">SystemName</span>
+            <div class="header__cubes"><span class="cube"></span><span class="cube"></span><span class="cube"></span></div>
+          </div>
+          <div class="header__account">
+            <div class="header__item balance">
+              <p class="header__account--title item-title">Баланс</p>
+              <p class="header__account--value">$<span class="value">13580</span></p>
+            </div>
+          </div>
+          <div class="header__notifications header__item"><i class="icon-bell icon"></i>
+            <div class="new-notifications-indicator"></div>
+          </div>
+          <div class="header__notifications header__item _message"><i class="icon-mail icon"></i>
+            <div class="new-notifications-indicator"></div>
+            <!--ul.header__messages-->
+            <!--    .triangle-with-shadow-->
+            <!--    p.header__messages--title Сообщения-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+          </div>
+          <div class="header__profile header__item"><a class="header__profile--photo" href="#"><img src="assets/img/profile__photo.png" alt=""></a>
+            <div class="header__profile--info">
+              <div class="triangle-origin"></div>
+              <p class="name">Константин </p>
+              <p class="lastname">Константинопольский</p>
+            </div>
+            <ul class="account__settings">
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-user icon"></i>Личные данные</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-security icon">   </i>Безопасность</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="auth.html"><i class="icon-exit icon"></i>Выйти</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="content">
+          <div class="content__inner">
+            <ul class="list__tabs">
+              <li class="list__tabs--item"><a class="list__tabs--link streams__tab--link _active" href="" data-href="active_streams">Активно</a></li>
+              <li class="list__tabs--item"><a class="list__tabs--link streams__tab--link" href="" data-href="archive_streams">Архивировано</a></li>
+            </ul>
+            <div class="streams__content">
+              <div class="streams__content--inner _active" data-target="active_streams">
+                <form class="form streams__form" method="post">
+                  <div class="calendar-trigger">
+                    <input name="date" id="date"/>
+                    <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
+                  </div>
+                  <div class="fieldset input-search"><i class="icon-search icon"></i>
+                    <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
+                    <label class="label" for="streams_active_search">Поиск потока</label>
+                  </div>
+                  <div class="search-info">
+                    <p class="search-info__title">Вы недавно искали</p><a class="search-info__text link" href="#">Новый Мерседес блеснул в Париже</a>
+                  </div><a class="btn btn-primary _js-popup-trigger" href="#addStream" data-fancybox data-options="{&quot;touch&quot; : false}">Добавить поток</a>
+                </form>
+                <div class="streams__table table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Дата новости
+                          <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
+                        </th>
+                        <th>Название потока
+                          <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                        </th>
+                        <th>Картинка</th>
+                        <th>Название статьи
+                          <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                        </th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 0"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="archive"><i class="icon-icon-archive"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 1"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="archive"><i class="icon-icon-archive"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 2"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="archive"><i class="icon-icon-archive"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 3"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="archive"><i class="icon-icon-archive"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="pagination-wrapper">
+                  <div class="record-count"><span>Отобразить по</span>
+                    <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                    <ul class="record-count__options">
+                      <div class="triangle-with-shadow"></div>
+                      <li class="record-count__option" rel="5">5</li>
+                      <li class="record-count__option" rel="10">10</li>
+                      <li class="record-count__option" rel="25">25</li>
+                      <li class="record-count__option" rel="50">50</li>
+                      <li class="record-count__option" rel="100">100</li>
+                    </ul>
+                  </div>
+                  <ul class="pagination">
+                    <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                    <li class="pagination__item"><a class="_active" href="">1</a></li>
+                    <li class="pagination__item"><a href="">2</a></li>
+                    <li class="pagination__item"><a href="">3</a></li>
+                    <li class="pagination__item"><a href="">4</a></li>
+                    <li class="pagination__item"><a href="">5</a></li>
+                    <li class="pagination__item"><a href="">...</a></li>
+                    <li class="pagination__item"><a href="">10</a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="streams__content--inner" data-target="archive_streams">
+                <form class="form streams__form" method="post">
+                  <div class="fieldset input-search"><i class="icon-search icon"></i>
+                    <input class="input" name="streams_active_search" type="text" id="streams_active_search"/>
+                    <label class="label" for="streams_active_search">Поиск потока</label>
+                  </div>
+                  <div class="search-info"><span class="search-info__title">Вы недавно искали</span>
+                    <p class="search-info__text">Новый Мерседес блеснул в Париже</p>
+                  </div>
+                  <button class="btn btn-primary" type="button">Добавить поток</button>
+                </form>
+                <div class="streams__table table-wrapper">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Дата новости
+                          <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
+                        </th>
+                        <th>Название потока
+                          <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                        </th>
+                        <th>Картинка</th>
+                        <th>Название статьи
+                          <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                        </th>
+                        <th></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 0"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="active"><i class="icon-icon-docs2"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 1"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="active"><i class="icon-icon-docs2"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 2"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="active"><i class="icon-icon-docs2"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="streams__table--date">12.02.2021</td>
+                        <td class="streams__table--name">Новый поток для рекламы бумаги</td>
+                        <td class="streams__table--image">
+                          <picture>
+                            <source srcset="assets/img/news__image.webp" type="image/webp"/>
+                            <source srcset="assets/img/news__image.jpg" type="image/jpeg"/><img src="assets/img/news__image.jpg" alt="news image"/>
+                          </picture>
+                        </td>
+                        <td class="streams__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                        <td class="streams__table--action">
+                          <div class="actions">
+                            <button class="action-elem"><i class="icon-eye"></i></button><a class="action-elem" data-action="edit"><i class="icon-pencil"></i></a>
+                            <button class="action-elem" data-action="copy" data-value="Поток 3"><i class="icon-icon-docs"></i></button><a class="action-elem" data-action="active"><i class="icon-icon-docs2"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="pagination-wrapper">
+                  <div class="record-count"><span>Отобразить по</span>
+                    <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                    <ul class="record-count__options">
+                      <div class="triangle-with-shadow"></div>
+                      <li class="record-count__option" rel="5">5</li>
+                      <li class="record-count__option" rel="10">10</li>
+                      <li class="record-count__option" rel="25">25</li>
+                      <li class="record-count__option" rel="50">50</li>
+                      <li class="record-count__option" rel="100">100</li>
+                    </ul>
+                  </div>
+                  <ul class="pagination">
+                    <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                    <li class="pagination__item"><a class="_active" href="">1</a></li>
+                    <li class="pagination__item"><a href="">2</a></li>
+                    <li class="pagination__item"><a href="">3</a></li>
+                    <li class="pagination__item"><a href="">4</a></li>
+                    <li class="pagination__item"><a href="">5</a></li>
+                    <li class="pagination__item"><a href="">...</a></li>
+                    <li class="pagination__item"><a href="">10</a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
+                    <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="addStream">
+        <div class="popup__close close-btn" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Добавление потока</h2>
+          <form class="form popup__form add-popup-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="stream_name" type="text" required id="stream_name">
+              <label class="label" for="stream_name">Название потока</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="stream_link" type="text" required id="stream_link" value="https://URL.com" disabled>
+              <label class="label" for="stream_link">Ссылка потока (Генерируется автоматически)</label>
+              <div class="icon icon-icon-docs" data-action="copy" data-value="https://URL.com"></div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Выбор типа страницы</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_1" id="page_type_1">
+                          <label for="page_type_1">Тип страницы 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_2" id="page_type_2">
+                          <label for="page_type_2">Тип страницы 2</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_3" id="page_type_3">
+                          <label for="page_type_3">Тип страницы 3</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Дизайн</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_1" id="design_1">
+                          <label for="design_1">Дизайн 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_2" id="design_2">
+                          <label for="design_2">Дизайн 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Домен</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_1" id="domain_1">
+                          <label for="domain_1">Домен 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_2" id="domain_2">
+                          <label for="domain_2">Домен 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="switch-wrapper">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="domonetization" value="domonetization"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Домонетизация</p>
+                      <div class="helper" data-text="Домонетизация - Способ получения дополнительной выгоды из трафика"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="popup_window" value="popup_window"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Поп-ап окно</p>
+                      <div class="helper" data-text="Pop-up - Окно с рекомендуемым контентом, которое всплывает поверх наполнения сайта"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="push_base" value="push_base"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Сбор пуш базы</p>
+                      <div class="helper" data-text="Push база - Сбор подписчиков, которые дали согласие на получение push уведомлений (могут появляться на экране любого устройства, где есть область оповещений)."><span>?</span></div>
+                    </div>
+            </div>
+            <div class="popup__postback">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="post_back" value="post_back"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Отправлять PostBack</p>
+                    </div>
+              <div class="popup__postback--text">
+                <p>PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:</p>
+                <p>{click_id} - номер лида в системе,</p>
+                <p>{status} - статус лида (pending, approved, rejected, trash),</p>
+                <p>{payout} - сумма отчислений вебмастеру,</p>
+                <p>{currency} - валюта (RUB)</p>
+                <p>{subid1}  - параметр, указанный в поле subid_1</p>
+                <p>...</p>
+                <p>{subid4}  - параметр, указанный в поле subid_4</p>
+                <p>Пример<span>http://sdjvjskdv.jsdvnjndsv/sdkv</span></p>
+                <h2 class="popup__title _track-title">Трекинг</h2>
+                <div class="fieldset">
+                  <input class="input" name="subid_1" type="text" required id="subid1">
+                  <label class="label" for="subid1">subid_1</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_2" type="text" required id="subid2">
+                  <label class="label" for="subid2">subid_2</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_3" type="text" required id="subid3">
+                  <label class="label" for="subid3">subid_3</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid4" type="text" required id="subid4">
+                  <label class="label" for="subid_4">subid_4</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="postback_url" type="text" required id="postback_url">
+                  <label class="label" for="postback_url">PostBack URL</label>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">ДОБАВИТЬ НОВЫЙ пОТОК</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="archivePopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Архивирование потока</h2>
+          <p class="popup__text">Вы уверены что хотите архивировать поток “Шо там ваще”?</p>
+          <form class="form archive_request">
+            <button class="btn btn-primary" type="submit">да, архивировать</button>
+            <button class="btn btn-outlined" type="button" data-fancybox-close>Нет</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="editStream">
+        <div class="popup__close close-btn" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Редактирование потока</h2>
+          <form class="form popup__form add-popup-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="stream_name" type="text" required id="stream_name">
+              <label class="label" for="stream_name">Название потока</label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="stream_link" type="text" required id="stream_link" value="https://URL.com" disabled>
+              <label class="label" for="stream_link">Ссылка потока (Генерируется автоматически)</label>
+              <div class="icon icon-icon-docs" data-action="copy"></div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Выбор типа страницы</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_1" id="page_type_1">
+                          <label for="page_type_1">Тип страницы 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_2" id="page_type_2">
+                          <label for="page_type_2">Тип страницы 2</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="page_type_3" id="page_type_3">
+                          <label for="page_type_3">Тип страницы 3</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Дизайн</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_1" id="design_1">
+                          <label for="design_1">Дизайн 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="design_2" id="design_2">
+                          <label for="design_2">Дизайн 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="fieldset">
+                    <div class="filter">
+                      <div class="filter__header">
+                        <div class="filter__item">
+                          <p class="filter__header--title">Домен</p>
+                        </div><i class="icon-down-dir icon"></i>
+                      </div>
+                      <div class="filter__body">
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_1" id="domain_1">
+                          <label for="domain_1">Домен 1</label>
+                        </div>
+                        <div class="filter__item">
+                          <input type="radio" name="stream" value="domain_2" id="domain_2">
+                          <label for="domain_2">Домен 2</label>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <div class="switch-wrapper">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="domonetization" value="domonetization"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Домонетизация</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="popup_window" value="popup_window"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Поп-ап окно</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="push_base" value="push_base"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Сбор пуш базы</p>
+                      <div class="helper"><span>?</span></div>
+                    </div>
+            </div>
+            <div class="popup__postback">
+                    <div class="switch-item">
+                      <label class="switch">
+                        <input type="checkbox" name="post_back" value="post_back"><span class="slider"></span>
+                      </label>
+                      <p class="switch__name">Отправлять PostBack</p>
+                    </div>
+              <div class="popup__postback--text">
+                <p>PostBack запрос будет отправлен на указанный адрес методом GET. Для передачи параметров в запрос Вы можете использовать макросы, указанные ниже:</p>
+                <p>{click_id} - номер лида в системе,</p>
+                <p>{status} - статус лида (pending, approved, rejected, trash),</p>
+                <p>{payout} - сумма отчислений вебмастеру,</p>
+                <p>{currency} - валюта (RUB)</p>
+                <p>{subid1}  - параметр, указанный в поле subid_1</p>
+                <p>...</p>
+                <p>{subid4}  - параметр, указанный в поле subid_4</p>
+                <p>Пример<span>http://sdjvjskdv.jsdvnjndsv/sdkv</span></p>
+                <h2 class="popup__title">Трекинг</h2>
+                <div class="fieldset">
+                  <input class="input" name="subid_1" type="text" required id="subid_1">
+                  <label class="label" for="subid_1">subid_1</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_2" type="text" required id="subid_2">
+                  <label class="label" for="subid_2">subid_2</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_3" type="text" required id="subid_3">
+                  <label class="label" for="subid_3">subid_3</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="subid_4" type="text" required id="subid_4">
+                  <label class="label" for="subid_4">subid_4</label>
+                </div>
+                <div class="fieldset">
+                  <input class="input" name="postback_url" type="text" required id="postback_url">
+                  <label class="label" for="postback_url">PostBack URL</label>
+                </div>
+              </div>
+            </div>
+            <div class="buttons-wrapper">
+              <button class="btn btn-primary" type="submit">Сохранить</button>
+              <button class="btn btn-outlined" type="button" data-fancybox-close>Отменить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

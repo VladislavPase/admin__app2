@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Dashboard</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body home">
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__navigation"><a class="sidebar__link _active" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
+          <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-finance-accounting icon"></i>Финансовый отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-settings icon"></i>Настройки</a></li>
+          </ul>
+          <h3 class="sidebar__title">ДРУГОЕ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="faq.html"><i class="icon-faq icon"></i>FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="page-content">
+        <header class="header">
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__name"><span class="profile-name">SystemName</span>
+            <div class="header__cubes"><span class="cube"></span><span class="cube"></span><span class="cube"></span></div>
+          </div>
+          <div class="header__account">
+            <div class="header__item balance">
+              <p class="header__account--title item-title">Баланс</p>
+              <p class="header__account--value">$<span class="value">13580</span></p>
+            </div>
+          </div>
+          <div class="header__notifications header__item"><i class="icon-bell icon"></i>
+            <div class="new-notifications-indicator"></div>
+          </div>
+          <div class="header__notifications header__item _message"><i class="icon-mail icon"></i>
+            <div class="new-notifications-indicator"></div>
+            <!--ul.header__messages-->
+            <!--    .triangle-with-shadow-->
+            <!--    p.header__messages--title Сообщения-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+          </div>
+          <div class="header__profile header__item"><a class="header__profile--photo" href="#"><img src="assets/img/profile__photo.png" alt=""></a>
+            <div class="header__profile--info">
+              <div class="triangle-origin"></div>
+              <p class="name">Константин </p>
+              <p class="lastname">Константинопольский</p>
+            </div>
+            <ul class="account__settings">
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-user icon"></i>Личные данные</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-security icon">   </i>Безопасность</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="auth.html"><i class="icon-exit icon"></i>Выйти</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="content">
+          <div class="content__inner">
+            <h1 class="page-title">Dashboard</h1>
+            <div class="account-info__wrapper">
+              <div class="account-info large">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Доступно</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1800</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">На очереди</p>
+                  <p class="account-info__item--value"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Всего</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1800</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Выплачено</p>
+                  <p class="account-info__item--value red-text"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+              </div>
+              <div class="account-info small">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Количество выплат</p>
+                  <p class="account-info__item--value"><span class="value">28</span>
+                  </p>
+                </div>
+              </div>
+              <div class="account-info small">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Количество потоков</p>
+                  <p class="account-info__item--value"><span class="value">27</span>
+                  </p>
+                </div>
+              </div>
+              <div class="account-info small">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Количество потоков</p>
+                  <p class="account-info__item--value"><span class="value">27</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="account-info__wrapper">
+              <div class="account-info chart">
+                <p class="account-info__item--tag item-title">Аналитика</p>
+                <h3 class="chart__title">Новости на сайте</h3>
+                <p class="chart__text">Количество новостей которые есть на сайте в % соотношении</p>
+                <div class="chart__diagram chart__news">
+                  <svg viewBox="0 0 42 42">
+                    <circle class="chart__center" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                    <circle class="chart__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFA800" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#78A6FF" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F07070" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#82F070" stroke-width="5" stroke-dasharray="39 61" stroke-dashoffset="76"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#B870F0" stroke-width="5" stroke-dasharray="12 88" stroke-dashoffset="37"></circle>
+                  </svg>
+                  <p class="diagram__text">Все новости</p>
+                </div>
+                <ul class="chart__list">
+                  <li class="chart__list--item">
+                    <div class="dot yellow"></div>
+                    <p class="name">Спорт</p>
+                    <p class="value">16%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot blue"></div>
+                    <p class="name">Политика</p>
+                    <p class="value">22%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot red"></div>
+                    <p class="name">Спецпроекты</p>
+                    <p class="value">11%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot green"></div>
+                    <p class="name">Здоровье</p>
+                    <p class="value">39%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot purple"></div>
+                    <p class="name">Шоу бизнес</p>
+                    <p class="value">12%</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="account-info chart">
+                <p class="account-info__item--title item-title">Аналитика</p>
+                <h3 class="chart__title">Трафик</h3>
+                <p class="chart__text">Количество устройств из которых идет трафик на новости</p>
+                <div class="chart__diagram chart__traffic">
+                  <svg viewBox="0 0 42 42">
+                    <circle class="chart__center" cx="21" cy="21" r="15.91549430918954" fill="#fff"></circle>
+                    <circle class="chart__ring" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFA800" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#78A6FF" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F07070" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87"></circle>
+                    <circle class="chart__segment" cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#82F070" stroke-width="5" stroke-dasharray="51 49" stroke-dashoffset="76"></circle>
+                  </svg>
+                  <p class="diagram__text">Все устройства</p>
+                </div>
+                <ul class="chart__list">
+                  <li class="chart__list--item">
+                    <div class="dot yellow"></div>
+                    <p class="name">ПК</p>
+                    <p class="value">16%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot blue"></div>
+                    <p class="name">Мобильные</p>
+                    <p class="value">22%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot red"></div>
+                    <p class="name">Планшет</p>
+                    <p class="value">11%</p>
+                  </li>
+                  <li class="chart__list--item">
+                    <div class="dot green"></div>
+                    <p class="name">Другое</p>
+                    <p class="value">51%</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="account-info account-info__news">
+                <p class="account-info__item--title item-title">Топ новостей</p>
+                <div class="news-wrapper"><a class="news__item" href="#">
+                    <h4 class="news__item--title">Путин больше не скрывает статус</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Месси наконец-то дебютировал за «ПСЖ» в матче...</h4>
+                    <div class="news__item--tag">Спорт</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">С чем есть дыню категорически нельзя...</h4>
+                    <div class="news__item--tag">Здоровье</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Путин больше не скрывает статус</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Путин больше не скрывает статус</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Месси наконец-то дебютировал за «ПСЖ» в матче...</h4>
+                    <div class="news__item--tag">Спорт</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">С чем есть дыню категорически нельзя...</h4>
+                    <div class="news__item--tag">Здоровье</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Месси наконец-то дебютировал за «ПСЖ» в матче...</h4>
+                    <div class="news__item--tag">Спорт</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">Путин больше не скрывает статус</h4>
+                    <div class="news__item--tag">Политика</div></a><a class="news__item" href="#">
+                    <h4 class="news__item--title">С чем есть дыню категорически нельзя...</h4>
+                    <div class="news__item--tag">Здоровье</div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+aside.sidebar
+    nav.sidebar__navigation
+        a.sidebar__link(href="./" class=(name === "home" ? "_active" : undefined))
+            i.icon-dashboard.icon
+            | Dashboard
+        h3.sidebar__title МОЙ КАБИНЕТ
+        ul.sidebar__list
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "teasers" ? "_active" : undefined)) 
+                    i.icon-teasers.icon
+                    | Тизеры
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "news" ? "_active" : undefined))
+                    i.icon-news.icon
+                    | Новости
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "offers" ? "_active" : undefined))
+                    i.icon-offers.icon
+                    | Офферы
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "reclama" ? "_active" : undefined))
+                    i.icon-reclama.icon
+                    | Рекламодатели
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "accounting" ? "_active" : undefined))
+                    i.icon-accounting.icon
+                    | Оперативный отчет
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "finances" ? "_active" : undefined))
+                    i.icon-finance-accounting.icon
+                    | Финансовый отчет
+            li.sidebar__list--item
+                a.sidebar__link(href="#" class=(name === "settings" ? "_active" : undefined))
+                    i.icon-settings.icon
+                    | Настройки
+        h3.sidebar__title ДРУГОЕ
+        ul.sidebar__list
+            li.sidebar__list--item
+                a.sidebar__link(href="faq.html" class=(name === "faq" ? "_active" : undefined))
+                    i.icon-faq.icon
+                    | FAQ

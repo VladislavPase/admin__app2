@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Новости</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body news">
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
+          <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link _active" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-finance-accounting icon"></i>Финансовый отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-settings icon"></i>Настройки</a></li>
+          </ul>
+          <h3 class="sidebar__title">ДРУГОЕ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="faq.html"><i class="icon-faq icon"></i>FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="page-content">
+        <header class="header">
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__name"><span class="profile-name">SystemName</span>
+            <div class="header__cubes"><span class="cube"></span><span class="cube"></span><span class="cube"></span></div>
+          </div>
+          <div class="header__account">
+            <div class="header__item balance">
+              <p class="header__account--title item-title">Баланс</p>
+              <p class="header__account--value">$<span class="value">13580</span></p>
+            </div>
+          </div>
+          <div class="header__notifications header__item"><i class="icon-bell icon"></i>
+            <div class="new-notifications-indicator"></div>
+          </div>
+          <div class="header__notifications header__item _message"><i class="icon-mail icon"></i>
+            <div class="new-notifications-indicator"></div>
+            <!--ul.header__messages-->
+            <!--    .triangle-with-shadow-->
+            <!--    p.header__messages--title Сообщения-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+          </div>
+          <div class="header__profile header__item"><a class="header__profile--photo" href="#"><img src="assets/img/profile__photo.png" alt=""></a>
+            <div class="header__profile--info">
+              <div class="triangle-origin"></div>
+              <p class="name">Константин </p>
+              <p class="lastname">Константинопольский</p>
+            </div>
+            <ul class="account__settings">
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-user icon"></i>Личные данные</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-security icon">   </i>Безопасность</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="auth.html"><i class="icon-exit icon"></i>Выйти</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="content">
+          <div class="content__inner">
+            <form class="news__form">
+              <div class="news__form--top">
+                <div class="fieldset input-search"><i class="icon-search icon"></i>
+                  <input class="input" name="news_search" type="text" id="news_search"/>
+                  <label class="label" for="news_search">Введите фрагмент заголовка новости</label>
+                </div>
+                <div class="search-info">
+                  <p class="search-info__title">Вы недавно искали</p><a class="search-info__text link" href="#">Новый Мерседес блеснул в Париже</a>
+                </div>
+              </div>
+              <div class="news__form--bottom">
+                <div class="calendar-trigger">
+                  <input name="date" id="date"/>
+                  <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
+                </div>
+                <div class="filter">
+                  <div class="filter__header">
+                    <div class="filter__item">
+                      <p class="filter__header--title">Маркер категории</p>
+                    </div><i class="icon-down-dir icon"></i>
+                  </div>
+                  <div class="filter__body">
+                    <div class="filter__item">
+                      <input type="checkbox" name="stream" value="category_1" id="category_1"/>
+                      <label for="category_1">Маркер категории1</label>
+                    </div>
+                    <div class="filter__item">
+                      <input type="checkbox" name="stream" value="category_2" id="category_2"/>
+                      <label for="category_2">Маркер категории2</label>
+                    </div>
+                    <div class="filter__item">
+                      <input type="checkbox" name="stream" value="category_3" id="category_3"/>
+                      <label for="category_3">Маркер категории3</label>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary" type="submit">ПРИМЕНИТЬ</button>
+                <button class="btn btn-outlined" type="button">ОЧИСТИТЬ</button>
+              </div>
+            </form>
+            <div class="table-wrapper news__table">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Дата новости
+                      <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
+                    </th>
+                    <th>Картинка</th>
+                    <th>Заголовок статьи
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                    </th>
+                    <th>Маркер категории
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                    </th>
+                    <th>Язык</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>12.02.2021</td>
+                    <td class="news__table--image"> 
+                      <picture>
+                        <source srcset="assets/img/news__image.webp" type="image/webp">
+                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
+                      </picture>
+                    </td>
+                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                    <td class="news__table--mark">
+                      <div class="category-mark">ШОУ-БИЗНЕС</div>
+                    </td>
+                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
+                    <td class="news__table--action"><a class="action-elem" value="0" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>12.02.2021</td>
+                    <td class="news__table--image"> 
+                      <picture>
+                        <source srcset="assets/img/news__image.webp" type="image/webp">
+                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
+                      </picture>
+                    </td>
+                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                    <td class="news__table--mark">
+                      <div class="category-mark">ШОУ-БИЗНЕС</div>
+                    </td>
+                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
+                    <td class="news__table--action"><a class="action-elem" value="1" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>12.02.2021</td>
+                    <td class="news__table--image"> 
+                      <picture>
+                        <source srcset="assets/img/news__image.webp" type="image/webp">
+                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
+                      </picture>
+                    </td>
+                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                    <td class="news__table--mark">
+                      <div class="category-mark">ШОУ-БИЗНЕС</div>
+                    </td>
+                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
+                    <td class="news__table--action"><a class="action-elem" value="2" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>12.02.2021</td>
+                    <td class="news__table--image"> 
+                      <picture>
+                        <source srcset="assets/img/news__image.webp" type="image/webp">
+                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
+                      </picture>
+                    </td>
+                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                    <td class="news__table--mark">
+                      <div class="category-mark">ШОУ-БИЗНЕС</div>
+                    </td>
+                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
+                    <td class="news__table--action"><a class="action-elem" value="3" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>12.02.2021</td>
+                    <td class="news__table--image"> 
+                      <picture>
+                        <source srcset="assets/img/news__image.webp" type="image/webp">
+                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
+                      </picture>
+                    </td>
+                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
+                    <td class="news__table--mark">
+                      <div class="category-mark">ШОУ-БИЗНЕС</div>
+                    </td>
+                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
+                    <td class="news__table--action"><a class="action-elem" value="4" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-wrapper">
+              <div class="record-count"><span>Отобразить по</span>
+                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                <ul class="record-count__options">
+                  <div class="triangle-with-shadow"></div>
+                  <li class="record-count__option" rel="5">5</li>
+                  <li class="record-count__option" rel="10">10</li>
+                  <li class="record-count__option" rel="25">25</li>
+                  <li class="record-count__option" rel="50">50</li>
+                  <li class="record-count__option" rel="100">100</li>
+                </ul>
+              </div>
+              <ul class="pagination">
+                <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                <li class="pagination__item"><a class="_active" href="">1</a></li>
+                <li class="pagination__item"><a href="">2</a></li>
+                <li class="pagination__item"><a href="">3</a></li>
+                <li class="pagination__item"><a href="">4</a></li>
+                <li class="pagination__item"><a href="">5</a></li>
+                <li class="pagination__item"><a href="">...</a></li>
+                <li class="pagination__item"><a href="">10</a></li>
+                <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

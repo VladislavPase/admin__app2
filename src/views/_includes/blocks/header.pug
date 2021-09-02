@@ -1,0 +1,62 @@
+include ../mixins/header-message
+
+header.header
+    .burger
+        span
+        span
+    .header__name
+        span.profile-name SystemName
+        .header__cubes
+            span.cube
+            span.cube
+            span.cube
+    .header__account
+        .header__item.balance
+            p.header__account--title.item-title Баланс
+            p.header__account--value
+                | $
+                span.value 13580
+    .header__notifications.header__item
+        i.icon-bell.icon
+        .new-notifications-indicator
+    .header__notifications.header__item._message
+        i.icon-mail.icon
+        .new-notifications-indicator
+        //ul.header__messages
+        //    .triangle-with-shadow
+        //    p.header__messages--title Сообщения
+        //    +headerMessage(
+        //        icon="icon-attention"
+        //        title="Что у вас случилось?"
+        //        date="26.01.2021"
+        //    )
+        //    +headerMessage(
+        //        icon="icon-attention"
+        //        title="Что у вас случилось?"
+        //        date="26.01.2021"
+        //    )
+        //    +headerMessage(
+        //        icon="icon-attention"
+        //        title="Что у вас случилось?"
+        //        date="26.01.2021"
+        //    )
+    .header__profile.header__item
+        a.header__profile--photo(href="#")
+            img(src="assets/img/profile__photo.png" alt="")
+        .header__profile--info
+            .triangle-origin
+            p.name Константин 
+            p.lastname Константинопольский
+        ul.account__settings
+            li.account__settings--item
+                a(href="profile.html").account__settings--link
+                    i.icon-user.icon
+                    | Личные данные
+            li.account__settings--item
+                a(href="profile.html").account__settings--link
+                    i.icon-security.icon    
+                    | Безопасность
+            li.account__settings--item
+                a(href="auth.html").account__settings--link
+                    i.icon-exit.icon
+                    | Выйти

@@ -1,0 +1,175 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/news-item
+    
+block config
+    - var pagetitle = 'Dashboard'
+    - var bodyClass = 'home'
+    - var pageName = 'Dashboard'
+    - var name = 'home'
+    - var headerIcon = 'icon-dashboard-icon'
+
+block content
+    .content
+        .content__inner
+            h1.page-title=pageName
+            .account-info__wrapper
+                .account-info.large
+                    +infoItem(
+                        title="Доступно"
+                        value=1800
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="На очереди"
+                        value=0
+                        type="cash"
+                    )
+                    +infoItem(
+                        title="Всего"
+                        value=1800
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="Выплачено"
+                        value=0
+                        type="cash"
+                        subclass="red-text"
+                    )
+                .account-info.small
+                    +infoItem(
+                        title="Количество выплат"
+                        value=28
+                    )
+                .account-info.small
+                    +infoItem(
+                        title="Количество потоков"
+                        value=27
+                    )
+                .account-info.small
+                    +infoItem(
+                        title="Количество потоков"
+                        value=27
+                    )
+            .account-info__wrapper
+                .account-info.chart
+                    p.account-info__item--tag.item-title Аналитика
+                    h3.chart__title Новости на сайте
+                    p.chart__text Количество новостей которые есть на сайте в % соотношении
+                    .chart__diagram.chart__news
+                        svg(viewBox="0 0 42 42")
+                            circle.chart__center(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                            circle.chart__ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFA800" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#78A6FF" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F07070" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#82F070" stroke-width="5" stroke-dasharray="39 61" stroke-dashoffset="76")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#B870F0" stroke-width="5" stroke-dasharray="12 88" stroke-dashoffset="37")
+                        p.diagram__text Все новости
+                    ul.chart__list
+                        li.chart__list--item
+                            .dot.yellow
+                            p.name Спорт
+                            p.value 16%
+                        li.chart__list--item
+                            .dot.blue
+                            p.name Политика
+                            p.value 22%
+                        li.chart__list--item
+                            .dot.red
+                            p.name Спецпроекты
+                            p.value 11%
+                        li.chart__list--item
+                            .dot.green
+                            p.name Здоровье
+                            p.value 39%
+                        li.chart__list--item
+                            .dot.purple
+                            p.name Шоу бизнес
+                            p.value 12%
+                .account-info.chart
+                    p.account-info__item--title.item-title Аналитика
+                    h3.chart__title Трафик
+                    p.chart__text Количество устройств из которых идет трафик на новости
+                    .chart__diagram.chart__traffic
+                        svg(viewBox="0 0 42 42")
+                            circle.chart__center(cx="21" cy="21" r="15.91549430918954" fill="#fff")
+                            circle.chart__ring(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#d2d3d4" stroke-width="5")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#FFA800" stroke-width="5" stroke-dasharray="16 84" stroke-dashoffset="25")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#78A6FF" stroke-width="5" stroke-dasharray="22 78" stroke-dashoffset="109")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#F07070" stroke-width="5" stroke-dasharray="11 89" stroke-dashoffset="87")
+                            circle.chart__segment(cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#82F070" stroke-width="5" stroke-dasharray="51 49" stroke-dashoffset="76")
+                        p.diagram__text Все устройства
+                    ul.chart__list
+                        li.chart__list--item
+                            .dot.yellow
+                            p.name ПК
+                            p.value 16%
+                        li.chart__list--item
+                            .dot.blue
+                            p.name Мобильные
+                            p.value 22%
+                        li.chart__list--item
+                            .dot.red
+                            p.name Планшет
+                            p.value 11%
+                        li.chart__list--item
+                            .dot.green
+                            p.name Другое
+                            p.value 51%
+                .account-info.account-info__news
+                    p.account-info__item--title.item-title Топ новостей
+                    - var n = 0
+                    .news-wrapper
+                        +news-item(
+                            href="#"
+                            title="Путин больше не скрывает статус"
+                            tag="Политика"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Месси наконец-то дебютировал за «ПСЖ» в матче..."
+                            tag="Спорт"
+                        )
+                        +news-item(
+                            href="#"
+                            title="С чем есть дыню категорически нельзя..."
+                            tag="Здоровье"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Путин больше не скрывает статус"
+                            tag="Политика"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Путин больше не скрывает статус"
+                            tag="Политика"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Месси наконец-то дебютировал за «ПСЖ» в матче..."
+                            tag="Спорт"
+                        )
+                        +news-item(
+                            href="#"
+                            title="С чем есть дыню категорически нельзя..."
+                            tag="Здоровье"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Месси наконец-то дебютировал за «ПСЖ» в матче..."
+                            tag="Спорт"
+                        )
+                        +news-item(
+                            href="#"
+                            title="Путин больше не скрывает статус"
+                            tag="Политика"
+                        )
+                        +news-item(
+                            href="#"
+                            title="С чем есть дыню категорически нельзя..."
+                            tag="Здоровье"
+                        )

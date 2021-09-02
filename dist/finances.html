@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Финансы</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body finances">
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
+          <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link _active" href="#"><i class="icon-finance-accounting icon"></i>Финансовый отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-settings icon"></i>Настройки</a></li>
+          </ul>
+          <h3 class="sidebar__title">ДРУГОЕ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="faq.html"><i class="icon-faq icon"></i>FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="page-content">
+        <header class="header">
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__name"><span class="profile-name">SystemName</span>
+            <div class="header__cubes"><span class="cube"></span><span class="cube"></span><span class="cube"></span></div>
+          </div>
+          <div class="header__account">
+            <div class="header__item balance">
+              <p class="header__account--title item-title">Баланс</p>
+              <p class="header__account--value">$<span class="value">13580</span></p>
+            </div>
+          </div>
+          <div class="header__notifications header__item"><i class="icon-bell icon"></i>
+            <div class="new-notifications-indicator"></div>
+          </div>
+          <div class="header__notifications header__item _message"><i class="icon-mail icon"></i>
+            <div class="new-notifications-indicator"></div>
+            <!--ul.header__messages-->
+            <!--    .triangle-with-shadow-->
+            <!--    p.header__messages--title Сообщения-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+          </div>
+          <div class="header__profile header__item"><a class="header__profile--photo" href="#"><img src="assets/img/profile__photo.png" alt=""></a>
+            <div class="header__profile--info">
+              <div class="triangle-origin"></div>
+              <p class="name">Константин </p>
+              <p class="lastname">Константинопольский</p>
+            </div>
+            <ul class="account__settings">
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-user icon"></i>Личные данные</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-security icon">   </i>Безопасность</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="auth.html"><i class="icon-exit icon"></i>Выйти</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="content">
+          <div class="content__inner">
+            <div class="finances__top">
+              <div class="account-info large">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Доступно</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1000</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">В ожидании</p>
+                  <p class="account-info__item--value"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Всего</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1000</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Выплачено</p>
+                  <p class="account-info__item--value"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+              </div>
+              <div class="support-text">При наличии вопросов Вы всегда можете к нам обращаться по электронному адресу <a class="link" href="">supportnew@yaya.com. </a>Всегда рады оказать информационную поддержку.</div>
+            </div>
+            <div class="finances__systems">
+              <div class="finances__systems--header">
+                <h3 class="finances__systems--title">Выбор платежной системы на вывод средств</h3>
+              </div>
+              <div class="finances__systems--body"><a class="finances__systems--item" href="#payoneer" data-fancybox data-options="{&quot;touch&quot; : false}"> 
+                  <picture>
+                    <source srcset="assets/img/finances/payoneer.webp" type="image/webp">
+                    <source srcset="assets/img/finances/payoneer.png" type="image/png"><img src="assets/img/finances/payoneer.png" alt="payoneer">
+                  </picture></a><a class="finances__systems--item" href="#alfaPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/alfabank.webp" type="image/webp">
+                    <source srcset="assets/img/finances/alfabank.png" type="image/png"><img src="assets/img/finances/alfabank.png" alt="alfabank">
+                  </picture></a><a class="finances__systems--item" href="#zaleyPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/zeley-cash.webp" type="image/webp">
+                    <source srcset="assets/img/finances/zeley-cash.png" type="image/png"><img src="assets/img/finances/zeley-cash.png" alt="zaley">
+                  </picture></a><a class="finances__systems--item" href="#tinkoffPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/tinkoff.webp" type="image/webp">
+                    <source srcset="assets/img/finances/tinkoff.png" type="image/png"><img src="assets/img/finances/tinkoff.png" alt="tinkoff">
+                  </picture></a><a class="finances__systems--item" href="#bankPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/master_card.webp" type="image/webp">
+                    <source srcset="assets/img/master_card.png" type="image/png"><img src="assets/img/master_card.png" alt="master_card">
+                  </picture></a><a class="finances__systems--item" href="#webmoneyPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/webmoney.webp" type="image/webp">
+                    <source srcset="assets/img/finances/webmoney.png" type="image/png"><img src="assets/img/finances/webmoney.png" alt="webmoney">
+                  </picture></a><a class="finances__systems--item" href="#capitalistDollar" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/capitalist_dollar.webp" type="image/webp">
+                    <source srcset="assets/img/finances/capitalist_dollar.png" type="image/png"><img src="assets/img/finances/capitalist_dollar.png" alt="capitalist $">
+                  </picture></a><a class="finances__systems--item" href="#capitalistPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/capitalist.webp" type="image/webp">
+                    <source srcset="assets/img/finances/capitalist.png" type="image/png"><img src="assets/img/finances/capitalist.png" alt="capitalist">
+                  </picture></a><a class="finances__systems--item" href="#everadPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/everad.webp" type="image/webp">
+                    <source srcset="assets/img/finances/everad.png" type="image/png"><img src="assets/img/finances/everad.png" alt="everad">
+                  </picture></a><a class="finances__systems--item" href="#wirePopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/wire.webp" type="image/webp">
+                    <source srcset="assets/img/finances/wire.png" type="image/png"><img src="assets/img/finances/wire.png" alt="wire">
+                  </picture></a><a class="finances__systems--item" href="#sberPopup" data-fancybox data-options="{&quot;touch&quot; : false}">
+                  <picture>
+                    <source srcset="assets/img/finances/sber.webp" type="image/webp">
+                    <source srcset="assets/img/finances/sber.png" type="image/png"><img src="assets/img/finances/sber.png" alt="Сбербанк">
+                  </picture></a></div>
+            </div>
+            <div class="finances__table table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Дата
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
+                    </th>
+                    <th>Номер транзакции
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
+                    </th>
+                    <th>Сумма
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
+                    </th>
+                    <th>Статус
+                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon _sorted"></i></div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="finances__table--id">12.07.2021</td>
+                    <td class="finances__table--num">123123123123123123123123123</td>
+                    <td class="finances__table--sum green-text">1 259 $</td>
+                    <td class="finances__table--status">Проведена</td>
+                  </tr>
+                  <tr>
+                    <td class="finances__table--id">12.07.2021</td>
+                    <td class="finances__table--num">12312312</td>
+                    <td class="finances__table--sum green-text">1 123 $</td>
+                    <td class="finances__table--status">Проведена</td>
+                  </tr>
+                  <tr>
+                    <td class="finances__table--id">12.07.2021</td>
+                    <td class="finances__table--num">12312312312312</td>
+                    <td class="finances__table--sum green-text">999 $</td>
+                    <td class="finances__table--status">Проведена</td>
+                  </tr>
+                  <tr>
+                    <td class="finances__table--id">12.07.2021</td>
+                    <td class="finances__table--num">1231231231231231231231</td>
+                    <td class="finances__table--sum green-text">1 245 $</td>
+                    <td class="finances__table--status">Проведена</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pagination-wrapper">
+              <div class="record-count"><span>Отобразить по</span>
+                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                <ul class="record-count__options">
+                  <div class="triangle-with-shadow"></div>
+                  <li class="record-count__option" rel="5">5</li>
+                  <li class="record-count__option" rel="10">10</li>
+                  <li class="record-count__option" rel="25">25</li>
+                  <li class="record-count__option" rel="50">50</li>
+                  <li class="record-count__option" rel="100">100</li>
+                </ul>
+              </div>
+              <ul class="pagination">
+                <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                <li class="pagination__item"><a class="_active" href="">1</a></li>
+                <li class="pagination__item"><a href="">2</a></li>
+                <li class="pagination__item"><a href="">3</a></li>
+                <li class="pagination__item"><a href="">4</a></li>
+                <li class="pagination__item"><a href="">5</a></li>
+                <li class="pagination__item"><a href="">...</a></li>
+                <li class="pagination__item"><a href="">10</a></li>
+                <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="alfaPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Альфа Банк</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="card_num" type="text" required id="card_num">
+              <label class="label" for="card_num">Номер карты <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_name" type="text" required id="person_name">
+              <label class="label" for="person_name">Имя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_lastname" type="text" required id="person_lastname">
+              <label class="label" for="person_lastname">Фамилия <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="payoneer">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Payonner</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="payoneer_sum" type="text" required id="payoneer_sum">
+              <label class="label" for="payoneer_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="payoneer_email" type="text" required id="payoneer_email">
+              <label class="label" for="payoneer_email">E-mail <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="zaleyPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на ZaleyCash</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="zaley_sum" type="text" required id="zaley_sum">
+              <label class="label" for="zaley_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="zaley_email" type="text" required id="zaley_email">
+              <label class="label" for="zaley_email">E-mail <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="tinkoffPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Тинькофф</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="card_num" type="text" required id="card_num">
+              <label class="label" for="card_num">Номер карты <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_name" type="text" required id="person_name">
+              <label class="label" for="person_name">Имя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_lastname" type="text" required id="person_lastname">
+              <label class="label" for="person_lastname">Фамилия <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="bankPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Заказ на выплату</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="bank_name" type="text" required id="bank_name">
+              <label class="label" for="bank_name">Наименование банка <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="card_num" type="text" required id="card_num">
+              <label class="label" for="card_num">Номер карты <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_name" type="text" required id="person_name">
+              <label class="label" for="person_name">Имя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_lastname" type="text" required id="person_lastname">
+              <label class="label" for="person_lastname">Фамилия <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="webmoneyPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на WebMoney</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="wallet_num" type="text" required id="wallet_num">
+              <label class="label" for="wallet_num">Номер кошелька WMZ <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="capitalistDollar">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Capitalist $</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="wallet_num" type="text" required id="wallet_num">
+              <label class="label" for="wallet_num">Номер кошелька Capitalist <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="dollar_convert" type="text" required disabled value="$0" id="dollar_convert">
+              <label class="label" for="dollar_convert">В итоге вы получите</label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="capitalistPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Capitalist</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="wallet_num" type="text" required id="wallet_num">
+              <label class="label" for="wallet_num">Номер кошелька Capitalist <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="everadPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Everad</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="email_everad" type="text" required id="email_everad">
+              <label class="label" for="email_everad">E-mail в Everad<span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="wirePopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на Wire Transfer</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="company_name" type="text" required id="company_name">
+              <label class="label" for="company_name">Название компании-получателя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="company_url" type="text" id="company_url">
+              <label class="label" for="company_url">URL компании-получателя </label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="company_address" type="text" required id="company_address">
+              <label class="label" for="company_address">Юридический адрес компании-получателя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="company_phone" type="text" id="company_phone">
+              <label class="label" for="company_phone">Телефон </label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="company_email" type="text" id="company_email">
+              <label class="label" for="company_email">E-mail </label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="company_person" type="text" id="company_person">
+              <label class="label" for="company_person">Контактное лицо </label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="iban_num" type="text" required id="iban_num">
+              <label class="label" for="iban_num">Счет получателя ( IBAN ) <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="bank_name" type="text" required id="bank_name">
+              <label class="label" for="bank_name">Название банка <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="bank_address" type="text" required id="bank_address">
+              <label class="label" for="bank_address">Юридический адрес банка <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="account_no" type="text" id="account_no">
+              <label class="label" for="account_no">Номер счета (Account No) </label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="swift_code" type="text" required id="swift_code">
+              <label class="label" for="swift_code">Swift Code <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="sberPopup">
+        <div class="popup__close" data-fancybox-close><span></span><span></span></div>
+        <div class="popup__inner">
+          <h2 class="popup__title">Выплата на СберБанк</h2>
+          <form class="form popup__form finances-form" method="post">
+            <div class="fieldset">
+              <input class="input" name="pay_sum" type="text" required id="pay_sum">
+              <label class="label" for="pay_sum">Сумма выплаты в рублях <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="card_num" type="text" required id="card_num">
+              <label class="label" for="card_num">Номер карты <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_name" type="text" required id="person_name">
+              <label class="label" for="person_name">Имя <span>*</span></label>
+            </div>
+            <div class="fieldset">
+              <input class="input" name="person_lastname" type="text" required id="person_lastname">
+              <label class="label" for="person_lastname">Фамилия <span>*</span></label>
+            </div>
+            <button class="btn-primary btn">Заказать выплату</button>
+          </form>
+        </div>
+      </div>
+      <div class="success_cash">
+        <div class="icon"></div>
+        <p>Заказ на вывод создан</p>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

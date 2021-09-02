@@ -1,0 +1,87 @@
+mixin table()
+    table
+        thead
+            tr
+                th Дата
+                    .sort-icons
+                        i.icon-up-dir.icon._up
+                        i.icon-down-dir.icon._down
+                th Переходы
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Уники
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Показы
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Клики
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th CTR, %
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th EPC
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Лиды
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th CR, %
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th % Аппрува
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Доход
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th Домонетизизация
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+                th В ожидании
+                    .sort-icons
+                        i.icon-up-dir.icon
+                        i.icon-down-dir.icon
+        tbody
+            - for (let i = 0; i < 5; i++)
+                tr
+                    td 12.02.2021
+                    td.redirect-value 10
+                    td.unique-value 10к
+                    td.shows-value 100к
+                    td.clicks-value 250
+                    td.ctr-value 0
+                    td.epc-value 0
+                    td.leads-value 100
+                    td.cr-value 20
+                    td.aproove-value 25
+                    td.income-value 0
+                    td.domo-value 0
+                    td.waiting-value 0
+        tfoot
+            tr
+                td Всего
+                td.redirect-total 10
+                td.unique-total 10к
+                td.shows-total 100к
+                td.clicks-total 250
+                td.ctr-total 0
+                td.epc-total 0
+                td.leads-total 100
+                td.cr-total 20
+                td.aproove-total 25
+                td.income-total 0
+                td.domo-total 0
+                td.waiting-total 0

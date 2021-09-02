@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <title>Статистика</title>
+    <meta name="description" content="Description">
+    <meta property="og:url" content="https://">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="title">
+    <meta property="twitter:title" content="title">
+    <meta property="og:description" content="description">
+    <meta property="twitter:description" content="description">
+    <meta property="og:image" content="assets/share.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
+  </head>
+  <body class="body statistics">
+    <div class="app">
+      <aside class="sidebar">
+        <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
+          <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-finance-accounting icon"></i>Финансовый отчет</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-settings icon"></i>Настройки</a></li>
+          </ul>
+          <h3 class="sidebar__title">ДРУГОЕ</h3>
+          <ul class="sidebar__list">
+            <li class="sidebar__list--item"><a class="sidebar__link" href="faq.html"><i class="icon-faq icon"></i>FAQ</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="page-content">
+        <header class="header">
+          <div class="burger"><span></span><span></span></div>
+          <div class="header__name"><span class="profile-name">SystemName</span>
+            <div class="header__cubes"><span class="cube"></span><span class="cube"></span><span class="cube"></span></div>
+          </div>
+          <div class="header__account">
+            <div class="header__item balance">
+              <p class="header__account--title item-title">Баланс</p>
+              <p class="header__account--value">$<span class="value">13580</span></p>
+            </div>
+          </div>
+          <div class="header__notifications header__item"><i class="icon-bell icon"></i>
+            <div class="new-notifications-indicator"></div>
+          </div>
+          <div class="header__notifications header__item _message"><i class="icon-mail icon"></i>
+            <div class="new-notifications-indicator"></div>
+            <!--ul.header__messages-->
+            <!--    .triangle-with-shadow-->
+            <!--    p.header__messages--title Сообщения-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+            <!--    +headerMessage(-->
+            <!--        icon="icon-attention"-->
+            <!--        title="Что у вас случилось?"-->
+            <!--        date="26.01.2021"-->
+            <!--    )-->
+          </div>
+          <div class="header__profile header__item"><a class="header__profile--photo" href="#"><img src="assets/img/profile__photo.png" alt=""></a>
+            <div class="header__profile--info">
+              <div class="triangle-origin"></div>
+              <p class="name">Константин </p>
+              <p class="lastname">Константинопольский</p>
+            </div>
+            <ul class="account__settings">
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-user icon"></i>Личные данные</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="profile.html"><i class="icon-security icon">   </i>Безопасность</a></li>
+              <li class="account__settings--item"><a class="account__settings--link" href="auth.html"><i class="icon-exit icon"></i>Выйти</a></li>
+            </ul>
+          </div>
+        </header>
+        <div class="content">
+          <div class="content__inner">
+            <div class="account-info__wrapper">
+              <div class="account-info large">
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Доступно</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1000</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">В ожидании</p>
+                  <p class="account-info__item--value"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Всего</p>
+                  <p class="account-info__item--value green-text"><span>$</span><span class="value">1000</span>
+                  </p>
+                </div>
+                <div class="account-info__item">
+                  <p class="account-info__item--title">Выплачено</p>
+                  <p class="account-info__item--value"><span>$</span><span class="value">0</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="statistics__table">
+              <form class="statistics__table--form">
+                <div class="statistics__table--filters">
+                  <div class="calendar-trigger">
+                    <input name="date" id="date"/>
+                    <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
+                  </div>
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Поток</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="stream_1" id="stream_1"/>
+                        <label for="stream_1">Поток1</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="stream_2" id="stream_2"/>
+                        <label for="stream_2">Поток2</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="stream_3" id="stream_3"/>
+                        <label for="stream_3">Поток3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Статья</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="article_1" id="article_1"/>
+                        <label for="article_1">Статья1</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="article_2" id="article_2"/>
+                        <label for="article_2">Статья2</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="article_3" id="article_3"/>
+                        <label for="article_3">Статья3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Дизайн</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="design_1" id="design_1"/>
+                        <label for="design_1">Дизайн1</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="design_2" id="design_2"/>
+                        <label for="design_2">Дизайн2</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Тип страницы</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="page_type_1" id="page_type_1"/>
+                        <label for="page_type_1">Тип страницы 1</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="page_type_2" id="page_type_2"/>
+                        <label for="page_type_2">Тип страницы 2</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="page_type_3" id="page_type_3"/>
+                        <label for="page_type_3">Тип страницы 3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Устройство</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="device_1" id="device_1"/>
+                        <label for="device_1">Устройство 1</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="device_2" id="device_2"/>
+                        <label for="device_2">Устройство 2</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="device_3" id="device_3"/>
+                        <label for="device_3">Устройство 3</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fieldset">
+                    <input class="input" name="sid_1" type="text">
+                    <label class="label" for="sid_1">sid_1</label>
+                  </div>
+                  <div class="fieldset">
+                    <input class="input" name="sid_2" type="text">
+                    <label class="label" for="sid_2">sid_2</label>
+                  </div>
+                  <div class="fieldset">
+                    <input class="input" name="sid_1" type="text">
+                    <label class="label" for="sid_3">sid_3</label>
+                  </div>
+                  <div class="fieldset">
+                    <input class="input" name="sid_1" type="text">
+                    <label class="label" for="sid_4">sid_4</label>
+                  </div>
+                </div>
+                <div class="statistics__table--actions">
+                  <div class="statistics__table--buttons">
+                    <button class="btn btn-primary" type="submit">ПРИМЕНИТЬ</button>
+                    <button class="btn btn-outlined" type="button">ОЧИСТИТЬ</button>
+                  </div>
+                  <div class="statistics__table--settings"> 
+                    <div class="settings-item setting-trigger"><a class="statistics__table--settings-link" href="#">
+                        <div class="icon-calendar icon"></div><span>Настроить поля в таблице</span>
+                        <div class="icon-down-dir"></div></a>
+                      <div class="table-settings">
+                        <div class="triangle-with-shadow"></div>
+                        <div class="settings-wrapper">
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="table_date" value="table_date"/>
+                            <label for="table_date">Дата
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="redirect" value="redirect"/>
+                            <label for="redirect">Переходы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="uniques" value="uniques"/>
+                            <label for="uniques">Уники
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="shows" value="shows"/>
+                            <label for="shows">Показы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="clicks" value="clicks"/>
+                            <label for="clicks">Клики
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="ctr" value="ctr"/>
+                            <label for="ctr">CTR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="leads" value="leads"/>
+                            <label for="leads">Лиды
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="cr" value="cr"/>
+                            <label for="cr">CR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="approval" value="approval"/>
+                            <label for="approval">Аппрув
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="income" value="income"/>
+                            <label for="income">Доход
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="domonetization" value="domonetization"/>
+                            <label for="domonetization">Домонетизировано
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="waiting" value="waiting"/>
+                            <label for="waiting">В ожидании
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-item"><a class="statistics__table--settings-link" href="#">
+                        <div class="icon-export icon"></div><span>Экспорт CSV</span></a></div>
+                  </div>
+                </div>
+              </form>
+              <div class="table-wrapper">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Дата
+                        <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
+                      </th>
+                      <th>Переходы
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Уники
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Показы
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Клики
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>CTR, %
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>EPC
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Лиды
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>CR, %
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>% Аппрува
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Доход
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>Домонетизизация
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                      <th>В ожидании
+                        <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td class="redirect-value">10</td>
+                      <td class="unique-value">10к</td>
+                      <td class="shows-value">100к</td>
+                      <td class="clicks-value">250</td>
+                      <td class="ctr-value">0</td>
+                      <td class="epc-value">0</td>
+                      <td class="leads-value">100</td>
+                      <td class="cr-value">20</td>
+                      <td class="aproove-value">25</td>
+                      <td class="income-value">0</td>
+                      <td class="domo-value">0</td>
+                      <td class="waiting-value">0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td class="redirect-value">10</td>
+                      <td class="unique-value">10к</td>
+                      <td class="shows-value">100к</td>
+                      <td class="clicks-value">250</td>
+                      <td class="ctr-value">0</td>
+                      <td class="epc-value">0</td>
+                      <td class="leads-value">100</td>
+                      <td class="cr-value">20</td>
+                      <td class="aproove-value">25</td>
+                      <td class="income-value">0</td>
+                      <td class="domo-value">0</td>
+                      <td class="waiting-value">0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td class="redirect-value">10</td>
+                      <td class="unique-value">10к</td>
+                      <td class="shows-value">100к</td>
+                      <td class="clicks-value">250</td>
+                      <td class="ctr-value">0</td>
+                      <td class="epc-value">0</td>
+                      <td class="leads-value">100</td>
+                      <td class="cr-value">20</td>
+                      <td class="aproove-value">25</td>
+                      <td class="income-value">0</td>
+                      <td class="domo-value">0</td>
+                      <td class="waiting-value">0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td class="redirect-value">10</td>
+                      <td class="unique-value">10к</td>
+                      <td class="shows-value">100к</td>
+                      <td class="clicks-value">250</td>
+                      <td class="ctr-value">0</td>
+                      <td class="epc-value">0</td>
+                      <td class="leads-value">100</td>
+                      <td class="cr-value">20</td>
+                      <td class="aproove-value">25</td>
+                      <td class="income-value">0</td>
+                      <td class="domo-value">0</td>
+                      <td class="waiting-value">0</td>
+                    </tr>
+                    <tr>
+                      <td>12.02.2021</td>
+                      <td class="redirect-value">10</td>
+                      <td class="unique-value">10к</td>
+                      <td class="shows-value">100к</td>
+                      <td class="clicks-value">250</td>
+                      <td class="ctr-value">0</td>
+                      <td class="epc-value">0</td>
+                      <td class="leads-value">100</td>
+                      <td class="cr-value">20</td>
+                      <td class="aproove-value">25</td>
+                      <td class="income-value">0</td>
+                      <td class="domo-value">0</td>
+                      <td class="waiting-value">0</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td>Всего</td>
+                      <td class="redirect-total">10</td>
+                      <td class="unique-total">10к</td>
+                      <td class="shows-total">100к</td>
+                      <td class="clicks-total">250</td>
+                      <td class="ctr-total">0</td>
+                      <td class="epc-total">0</td>
+                      <td class="leads-total">100</td>
+                      <td class="cr-total">20</td>
+                      <td class="aproove-total">25</td>
+                      <td class="income-total">0</td>
+                      <td class="domo-total">0</td>
+                      <td class="waiting-total">0</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+            <div class="pagination-wrapper">
+              <div class="record-count"><span>Отобразить по</span>
+                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                <ul class="record-count__options">
+                  <div class="triangle-with-shadow"></div>
+                  <li class="record-count__option" rel="5">5</li>
+                  <li class="record-count__option" rel="10">10</li>
+                  <li class="record-count__option" rel="25">25</li>
+                  <li class="record-count__option" rel="50">50</li>
+                  <li class="record-count__option" rel="100">100</li>
+                </ul>
+              </div>
+              <ul class="pagination">
+                <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                <li class="pagination__item"><a class="_active" href="">1</a></li>
+                <li class="pagination__item"><a href="">2</a></li>
+                <li class="pagination__item"><a href="">3</a></li>
+                <li class="pagination__item"><a href="">4</a></li>
+                <li class="pagination__item"><a href="">5</a></li>
+                <li class="pagination__item"><a href="">...</a></li>
+                <li class="pagination__item"><a href="">10</a></li>
+                <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="assets/js/main.bundle.js?v=1.2.3"></script>
+    <script src="assets/js/vendors~main.bundle.js"></script>
+  </body>
+</html>

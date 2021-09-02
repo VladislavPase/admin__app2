@@ -1,0 +1,120 @@
+.filter {
+    border-radius: 8px;
+    padding: 0 10px;
+    background: $color-white;
+    border: 1px solid $color-gray-dark;
+    flex: 1 0 auto;
+    cursor: pointer;
+    * {
+        user-select: none;
+    }
+    &__item {
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 16px;
+        &:not(:first-child) {
+            border-top: 1px solid rgba(101,125,149,.15);
+        }
+        &.js-disabled {
+            pointer-events: none;
+            cursor: not-allowed;
+            background-color: rgba(0,0,0,.05);
+
+            label {
+                pointer-events: none !important;
+            }
+        }
+    }
+    &__header {
+        overflow: hidden;
+        padding: 15px 25px 15px 0;
+        cursor: pointer;
+        width: 100%;
+        .icon {
+            position: absolute;
+            right: -2px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__body {
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        width: calc(100% + 2px);
+        background: $color-white;
+        //padding: 0 10px;
+        display: none;
+        border: 1px solid $color-gray-dark;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        z-index: 5;
+    }
+
+    &._opened {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        .filter__body {
+            display: block;
+        }
+    }
+    input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 15px 10px;
+        cursor: pointer;
+        z-index: 2;
+        transition: background-color .2s ease;
+        &:hover {
+            background-color: rgba(101,125,149,.15);
+        }
+    }
+
+    input:checked + label {
+        color: $color-yellow;
+        font-weight: bold;
+    }
+
+    &._opened + .label, &._selected + .label {
+        top: -8px;
+        left: 10px;
+        opacity: 1;
+        font-size: 12px;
+        line-height: 14px;
+        color: $color-blue-light;
+    }
+
+    &._selected + .label {
+        color: $color-base;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .filter {
+        &__item {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        &__header {
+            padding: 10px 25px 10px 0;
+            font-size: 12px;
+            line-height: 14px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .filter {
+        flex: 0 0 100%;
+    }
+}

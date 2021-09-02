@@ -1,0 +1,401 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: $color-white;
+
+    .burger {
+        flex: 0 0 20px;
+        height: 20px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right: 20px;
+        display: none;
+        z-index: 999;
+
+        span {
+            width: 100%;
+            height: 2px;
+            background-color: $color-base;
+        }
+
+        &._active {
+            span {
+                position: absolute;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+    }
+
+    &__name {
+        color: $color-base;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__cubes {
+        width: 24px;
+        height: 26px;
+        margin-left: 10px;
+        .cube {
+            display: block;
+            position: absolute;
+            &:first-child {
+                width: 14px;
+                height: 14px;
+                background: #3A58FF;
+                right: 0;
+                top: 0;
+                z-index: 1;
+            }
+            &:nth-child(2) {
+                width: 10px;
+                height: 10px;
+                left: 0;
+                top: 10px;
+                background: #78A6FF;
+                z-index: 2;
+            }
+            &:last-child {
+                width: 8px;
+                height: 8px;
+                background: #78DFFF;
+                bottom: 0;
+                left: 50%;
+                margin-left: -4px;
+                z-index: 3;
+            }
+        }
+    }
+
+    &__account {
+        display: flex;
+        margin-left: auto;
+
+        &--title {
+            font-size: 12px;
+            line-height: 16px;
+            color: $color-base;
+        }
+
+        &--value {
+            margin-top: 5px;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 24px;
+            color: $color-green;
+        }
+    }
+
+    &__item {
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__profile {
+        padding: 15px 0 15px 20px;
+        cursor: pointer;
+
+        &--photo {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #DCE1FF;
+            overflow: hidden;
+            img {
+                max-width: 100%;
+            }
+        }
+        &--info {
+            background-color: $color-link;
+            color: $color-white;
+            padding: 8px;
+            box-shadow: 0 10px 30px rgba(133, 133, 175, 0.45);
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 16px;
+            position: absolute;
+            right: 0;
+            top: calc(100% - 10px);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+
+            .triangle-origin {
+                position: absolute;
+                right: 20px;
+                bottom: 100%;
+            }
+        }
+
+        &.is-hover {
+            .header__profile--info {
+                opacity: 1;
+            }
+        }
+
+        &._opened {
+            .header__profile--photo {
+                border-color: $color-link;
+            }
+            .account__settings {
+                display: block !important;
+            }
+        }
+    }
+
+    &__notifications {
+        cursor: pointer;
+        margin-right: 25px;
+        &:not(._message) {
+            margin-left: 75px;
+        }
+        .icon {
+            font-size: 22px;
+            pointer-events: none;
+            color: #8080A7;
+            opacity: .5;
+        }
+        .new-notifications-indicator {
+            background: $color-blue-light;
+            border: 1px solid $color-white;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            position: absolute;
+            top: 30px;
+            right: 2px;
+            pointer-events: none;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background: #F4F7FC;
+            border-radius: 50%;
+            display: none;
+            transition: all .2s ease;
+        }
+
+        &._opened {
+            &::before {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+            > .icon {
+                color: $color-blue-light;
+            }
+            .header__messages {
+                display: block !important;
+            }
+        }
+    }
+
+    &__messages {
+        display: none;
+        position: absolute;
+        width: 320px;
+        top: calc(100% - 15px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 6px;
+        background: $color-white;
+        box-shadow: 0 0 4px rgba(128, 141, 162, 0.36);
+        padding: 12px 20px;
+        z-index: 3;
+
+        &--title {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 8px;
+        }
+
+        &--item {
+            display: flex;
+            padding-top: 10px;
+            transition: background-color .2s ease;
+
+            &:hover {
+                background-color: rgba(101, 125, 149, 0.15);
+            }
+        }
+
+        &--icon {
+            color: $color-yellow;
+        }
+
+        &--content {
+            margin-left: 15px;
+            flex: 1;
+            padding: 0 0 10px;
+        }
+
+        .message-title {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .message-date {
+            font-size: 12px;
+            line-height: 22px;
+            color: $color-gray-dark;
+        }
+
+        &--item {
+            &:not(:last-child) {
+                .header__messages--content {
+                    border-bottom: 1px solid rgba(138,167,224,.3);
+                }
+            }
+        }
+    }
+
+    .account__settings {
+        position: absolute;
+        right: 0;
+        width: 200px;
+        top: calc(100% - 15px);
+        background: $color-white;
+        box-shadow: 0 35px 80px rgba(133, 133, 175, 0.65);
+        border-radius: 4px;
+        z-index: 4;
+        display: none;
+        padding: 8px 0;
+
+        &--link {
+            width: 100%;
+            height: 100%;
+            padding: 10px 25px;
+            font-size: 14px;
+            line-height: 16px;
+            flex: 1;
+            color: #8080A7;
+            display: flex;
+            align-items: center;
+            transition: color .3s ease, background-color .3s ease;
+
+            .icon {
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                color: $color-white;
+                background-color: #5278FB;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .header {
+
+        &__item {
+            padding: 10px 15px;
+
+            &.header__profile {
+                padding: 10px 0 10px 15px;
+            }
+        }
+
+        &__route {
+            font-size: 16px;
+            line-height: 19px;
+
+            .route__name {
+                display: none;
+            }
+        }
+
+        &__account {
+            &--title {
+                font-size: 12px;
+                line-height: 14px;
+            }
+
+            &--value {
+                font-size: 14px;
+                line-height: 16px;
+            }
+        }
+
+        &__notifications {
+            .new-notifications-indicator {
+                right: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .header {
+        .burger {
+            display: flex;
+        }
+
+        &__profile {
+            &--info {
+                display: none;
+            }
+        }
+
+        &__notifications {
+            margin: 0 10px;
+            &:not(._message) {
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        .profile-name {
+            display: none;
+        }
+
+        &__account {
+            display: none;
+        }
+
+        &__notifications {
+            &:not(._message) {
+                margin: 0 10px 0 auto;
+            }
+        }
+
+        &__messages {
+            left: 0;
+            transform: translateX(-25%);
+
+            .triangle-with-shadow {
+                left: 30%;
+                transform: none;
+            }
+        }
+
+        &__profile {
+            margin-left: 10px;
+        }
+    }
+}

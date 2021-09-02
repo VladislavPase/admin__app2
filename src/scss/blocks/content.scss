@@ -1,0 +1,19 @@
+.content {
+    flex: 1;
+    padding: 30px;
+
+    &__inner {
+        max-width: 1385px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .content {
+        &__inner {
+            max-width: 100%;
+        }
+    }
+}

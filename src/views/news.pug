@@ -1,0 +1,90 @@
+extends _includes/layout
+include _includes/mixins/filter
+include _includes/mixins/input-search
+include _includes/mixins/calendar
+
+block config
+    - var pagetitle = 'Новости'
+    - var bodyClass = 'news'
+    - var pageName = 'Новости'
+    - var name = 'news'
+    - var headerIcon = 'icon-news-icon'
+
+block content
+    .content
+        .content__inner
+            form.news__form
+                .news__form--top
+                    +inputSearch(
+                        id="news_search"
+                        name="news_search"
+                        label="Введите фрагмент заголовка новости"
+                    ) 
+                    .search-info
+                        p.search-info__title Вы недавно искали
+                        a(href="#").search-info__text.link Новый Мерседес блеснул в Париже
+                .news__form--bottom
+                    +calendar()
+                    +filter(
+                        title="Маркер категории"
+                        type="checkbox"
+                        options=[
+                            {
+                                id: 123123123,
+                                option: 'Маркер категории1',
+                                value: 'category_1'
+                            },
+                            {
+                                id: 12312,
+                                option: 'Маркер категории2',
+                                value: 'category_2'
+                            },
+                            {
+                                id: 123125,
+                                option: 'Маркер категории3',
+                                value: 'category_3'
+                            }
+                        ]
+                    )
+                    button(type="submit").btn.btn-primary ПРИМЕНИТЬ
+                    button(type="button").btn.btn-outlined ОЧИСТИТЬ
+            .table-wrapper.news__table
+                table
+                    thead
+                        tr
+                            th Дата новости
+                                .sort-icons
+                                    i.icon-up-dir.icon._up
+                                    i.icon-down-dir.icon._down
+                            th Картинка
+                            th Заголовок статьи
+                                .sort-icons
+                                    i.icon-up-dir.icon
+                                    i.icon-down-dir.icon
+                            th Маркер категории
+                                .sort-icons
+                                    i.icon-up-dir.icon
+                                    i.icon-down-dir.icon
+                            th Язык
+                            th 
+                    tbody
+                        - for (let i = 0; i < 5; i++)
+                            tr
+                                td 12.02.2021
+                                td.news__table--image 
+                                    picture
+                                        source(srcset="assets/img/news__image.webp" type="image/webp")
+                                        source(srcset="assets/img/news__image.jpg" type="image/jpeg")
+                                        img(src="assets/img/news__image.jpg" alt="news image")
+                                td.news__table--h
+                                    | ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.
+                                td.news__table--mark
+                                    .category-mark ШОУ-БИЗНЕС
+                                td.news__table--lang
+                                    img(src="assets/img/ru-flag.svg" alt="RU")
+                                td.news__table--action
+                                    a(value=i href="https://izvestiya24.ru/1451" target="_blank").action-elem
+                                        i.icon-eye
+            .pagination-wrapper
+                include _includes/blocks/renderCount
+                include _includes/blocks/pagination

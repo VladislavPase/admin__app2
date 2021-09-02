@@ -1,0 +1,43 @@
+block config
+    
+doctype html
+html(lang=__.lang, class="no-js")
+    head
+        block head
+            include head
+            block styles
+                link(rel='stylesheet', href='assets/css/common.css?v=' + PACKAGE.version)
+    body.body(class=bodyClass)
+        
+        .app
+            if name === 'auth' || name === 'remember' || name === 'done'
+                block content
+            else  
+                include blocks/aside
+                .page-content
+                    include blocks/header
+                    block content
+                if name === 'streams'
+                    include blocks/streamsAddPopup
+                    include blocks/streamsArchivePopup
+                    include blocks/editStreamPopup
+                else if name === 'parking'
+                    include blocks/parkingDomainPopup
+                    include blocks/addPixelPopup
+                else if name === 'finances'
+                    include blocks/alfbabankPopup
+                    include blocks/payoneerPopup
+                    include blocks/zaleyPopop
+                    include blocks/tinkoffPopup
+                    include blocks/bankPopup
+                    include blocks/webMoneyPopup
+                    include blocks/capitalistDollar
+                    include blocks/capitalistPopup
+                    include blocks/everadPopup
+                    include blocks/wirePopup
+                    include blocks/sberPopup
+                    include blocks/success_cash
+
+        block scripts
+            include scripts
+                
