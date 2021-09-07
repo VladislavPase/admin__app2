@@ -1,0 +1,186 @@
+extends _includes/layout
+include _includes/mixins/accountInfoItem
+include _includes/mixins/filter
+include _includes/mixins/table
+include _includes/mixins/tableSettings
+include _includes/mixins/calendar
+    
+block config
+    
+    - var pagetitle = 'Тизеры'
+    - var bodyClass = 'teasers page'
+    - var pageName = 'Тизеры'
+    - var name = 'teasers'
+
+block content
+    .content
+        .content__inner
+            .top-content
+                h1.page-title=pageName
+                button.btn.btn-secondary + Добавить тизер
+            .account-info__wrapper
+                .account-info.large
+                    +infoItem(
+                        title="Доступно"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="В ожидании"
+                        value=0
+                        type="cash"
+                    )
+                    +infoItem(
+                        title="Всего"
+                        value=1000
+                        type="cash"
+                        subclass="green-text"
+                    )
+                    +infoItem(
+                        title="Выплачено"
+                        value=0
+                        type="cash"
+                    )
+            .page__table
+                form.page__table--form()
+                    .page__table--filters
+                        +filter(
+                            title="Все категории"
+                            type="checkbox"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Политика',
+                                    value: 'politics'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Здоровье',
+                                    value: 'health'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Шоу-бизнес',
+                                    value: 'business'
+                                },
+                                {
+                                    id: 123,
+                                    option: 'Спорт',
+                                    value: 'sport'
+                                },
+                                {
+                                    id: 2323,
+                                    option: 'Спецпроекты',
+                                    value: 'projects'
+                                }
+                            ]
+                        )
+                        +calendar()
+                        .page__table--buttons
+                            button(type="submit").btn.btn-primary Применить
+                            button(type="button").btn.btn-outlined Очистить
+                        .page__table--settings 
+                            .settings-item.setting-trigger
+                                a(href="#").page__table--settings-link
+                                    span Настроить поля
+                                    .icon-grid.icon
+                                .table-settings
+                                    .triangle-with-shadow
+                                    .settings-wrapper
+                                        +tableSetting(
+                                            title="Дата"
+                                            id="table_date"
+                                            value="table_date"
+                                        )
+                                        +tableSetting(
+                                            title="Переходы"
+                                            id="redirect"
+                                            value="redirect"
+                                        )
+                                        +tableSetting(
+                                            title="Уники"
+                                            id="uniques"
+                                            value="uniques"
+                                        )
+                                        +tableSetting(
+                                            title="Показы"
+                                            id="shows"
+                                            value="shows"
+                                        )
+                                        +tableSetting(
+                                            title="Клики"
+                                            id="clicks"
+                                            value="clicks"
+                                        )
+                                        +tableSetting(
+                                            title="CTR"
+                                            id="ctr"
+                                            value="ctr"
+                                        )
+                                        +tableSetting(
+                                            title="Лиды"
+                                            id="leads"
+                                            value="leads"
+                                        )
+                                        +tableSetting(
+                                            title="CR"
+                                            id="cr"
+                                            value="cr"
+                                        )
+                                        +tableSetting(
+                                            title="Аппрув"
+                                            id="approval"
+                                            value="approval"
+                                        )
+                                        +tableSetting(
+                                            title="Доход"
+                                            id="income"
+                                            value="income"
+                                        )
+                                        +tableSetting(
+                                            title="Домонетизировано"
+                                            id="domonetization"
+                                            value="domonetization"
+                                        )
+                                        +tableSetting(
+                                            title="В ожидании"
+                                            id="waiting"
+                                            value="waiting"
+                                        )
+                            .settings-item
+                                a(href="#").teasers__table--settings-link.export
+                                    span Экспорт CSV / Excel
+                                    .icon-export.icon  
+                .table-wrapper
+                    +table(
+                        data=[
+                            {
+                                date: '11.06.2021',
+                                id: '20425880',
+                                img: 'assets/img/teaser__image1',
+                                title: 'Российский возбудитель оказался дешевле и мощнее самой виагры в 78',
+                                category: 'Здоровье',
+                                category_className: 'category-health',
+                                offer: 'Неокард (0₽)',
+                                reclama: 'Everad',
+                                lang: 'ru',
+                                size: '0,2424952'
+                            },
+                            {
+                                date: '21.07.2021',
+                                id: '27854125',
+                                img: 'assets/img/teaser__image2',
+                                title: 'Что ждет россиян в октябре',
+                                category: 'Политика',
+                                category_className: 'category-politics',
+                                offer: 'Варитонус',
+                                reclama: 'RocketProfit',
+                                lang: 'ru',
+                                size: '0,2424952'
+                            }
+                        ]
+                    )
+            .pagination-wrapper
+                include _includes/blocks/renderCount
+                include _includes/blocks/pagination

@@ -18,14 +18,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/common.css?v=1.2.3">
   </head>
-  <body class="body news">
+  <body class="body news page">
     <div class="app">
       <aside class="sidebar">
         <nav class="sidebar__navigation"><a class="sidebar__link" href="./"><i class="icon-dashboard icon"></i>Dashboard</a>
           <h3 class="sidebar__title">МОЙ КАБИНЕТ</h3>
           <ul class="sidebar__list">
-            <li class="sidebar__list--item"><a class="sidebar__link" href="#"> <i class="icon-teasers icon"></i>Тизеры</a></li>
-            <li class="sidebar__list--item"><a class="sidebar__link _active" href="#"><i class="icon-news icon"></i>Новости</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link" href="teasers.html"> <i class="icon-teasers icon"></i>Тизеры</a></li>
+            <li class="sidebar__list--item"><a class="sidebar__link _active" href="news.html"><i class="icon-news icon"></i>Новости</a></li>
             <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-offers icon"></i>Офферы</a></li>
             <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-reclama icon"></i>Рекламодатели</a></li>
             <li class="sidebar__list--item"><a class="sidebar__link" href="#"><i class="icon-accounting icon"></i>Оперативный отчет</a></li>
@@ -89,146 +89,213 @@
         </header>
         <div class="content">
           <div class="content__inner">
-            <form class="news__form">
-              <div class="news__form--top">
-                <div class="fieldset input-search"><i class="icon-search icon"></i>
-                  <input class="input" name="news_search" type="text" id="news_search"/>
-                  <label class="label" for="news_search">Введите фрагмент заголовка новости</label>
-                </div>
-                <div class="search-info">
-                  <p class="search-info__title">Вы недавно искали</p><a class="search-info__text link" href="#">Новый Мерседес блеснул в Париже</a>
-                </div>
+            <div class="top-content">
+              <h1 class="page-title">Новости</h1>
+              <button class="btn btn-secondary">+ Добавить новость</button>
+            </div>
+            <div class="news__form--top">
+              <div class="fieldset input-search"><i class="icon-search icon"></i>
+                <input class="input" name="news_search" type="text" id="news_search">
+                <label class="label" for="news_search">Поиск</label>
               </div>
-              <div class="news__form--bottom">
-                <div class="calendar-trigger">
-                  <input name="date" id="date"/>
-                  <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21.05.2019 - 26.05.2019</span></label>
-                </div>
-                <div class="filter">
-                  <div class="filter__header">
-                    <div class="filter__item">
-                      <p class="filter__header--title">Маркер категории</p>
-                    </div><i class="icon-down-dir icon"></i>
-                  </div>
-                  <div class="filter__body">
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_1" id="category_1"/>
-                      <label for="category_1">Маркер категории1</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_2" id="category_2"/>
-                      <label for="category_2">Маркер категории2</label>
-                    </div>
-                    <div class="filter__item">
-                      <input type="checkbox" name="stream" value="category_3" id="category_3"/>
-                      <label for="category_3">Маркер категории3</label>
-                    </div>
-                  </div>
-                </div>
-                <button class="btn btn-primary" type="submit">ПРИМЕНИТЬ</button>
-                <button class="btn btn-outlined" type="button">ОЧИСТИТЬ</button>
+              <div class="search-info">
+                <p class="search-info__title">Вы недавно искали</p><a class="search-info__text link" href="#">Новый Мерседес блеснул в Париже</a>
               </div>
-            </form>
-            <div class="table-wrapper news__table">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Дата новости
-                      <div class="sort-icons"><i class="icon-up-dir icon _up"></i><i class="icon-down-dir icon _down"></i></div>
-                    </th>
-                    <th>Картинка</th>
-                    <th>Заголовок статьи
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Маркер категории
-                      <div class="sort-icons"><i class="icon-up-dir icon"></i><i class="icon-down-dir icon"></i></div>
-                    </th>
-                    <th>Язык</th>
-                    <th> </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td class="news__table--image"> 
-                      <picture>
-                        <source srcset="assets/img/news__image.webp" type="image/webp">
-                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
-                      </picture>
-                    </td>
-                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
-                    <td class="news__table--mark">
-                      <div class="category-mark">ШОУ-БИЗНЕС</div>
-                    </td>
-                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="0" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td class="news__table--image"> 
-                      <picture>
-                        <source srcset="assets/img/news__image.webp" type="image/webp">
-                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
-                      </picture>
-                    </td>
-                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
-                    <td class="news__table--mark">
-                      <div class="category-mark">ШОУ-БИЗНЕС</div>
-                    </td>
-                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="1" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td class="news__table--image"> 
-                      <picture>
-                        <source srcset="assets/img/news__image.webp" type="image/webp">
-                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
-                      </picture>
-                    </td>
-                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
-                    <td class="news__table--mark">
-                      <div class="category-mark">ШОУ-БИЗНЕС</div>
-                    </td>
-                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="2" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td class="news__table--image"> 
-                      <picture>
-                        <source srcset="assets/img/news__image.webp" type="image/webp">
-                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
-                      </picture>
-                    </td>
-                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
-                    <td class="news__table--mark">
-                      <div class="category-mark">ШОУ-БИЗНЕС</div>
-                    </td>
-                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="3" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
-                  </tr>
-                  <tr>
-                    <td>12.02.2021</td>
-                    <td class="news__table--image"> 
-                      <picture>
-                        <source srcset="assets/img/news__image.webp" type="image/webp">
-                        <source srcset="assets/img/news__image.jpg" type="image/jpeg"><img src="assets/img/news__image.jpg" alt="news image">
-                      </picture>
-                    </td>
-                    <td class="news__table--h">ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.</td>
-                    <td class="news__table--mark">
-                      <div class="category-mark">ШОУ-БИЗНЕС</div>
-                    </td>
-                    <td class="news__table--lang"><img src="assets/img/ru-flag.svg" alt="RU"></td>
-                    <td class="news__table--action"><a class="action-elem" value="4" href="https://izvestiya24.ru/1451" target="_blank"><i class="icon-eye"></i></a></td>
-                  </tr>
-                </tbody>
-              </table>
+            </div>
+            <div class="page__table">
+              <form class="page__table--form">
+                <div class="page__table--filters">
+                  <div class="filter">
+                    <div class="filter__header">
+                      <div class="filter__item">
+                        <p class="filter__header--title">Все категории</p>
+                      </div><i class="icon-down-dir icon"></i>
+                    </div>
+                    <div class="filter__body">
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="politics" id="politics"/>
+                        <label for="politics">Политика</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="health" id="health"/>
+                        <label for="health">Здоровье</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="business" id="business"/>
+                        <label for="business">Шоу-бизнес</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="sport" id="sport"/>
+                        <label for="sport">Спорт</label>
+                      </div>
+                      <div class="filter__item">
+                        <input type="checkbox" name="stream" value="projects" id="projects"/>
+                        <label for="projects">Спецпроекты</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calendar-trigger">
+                    <input name="date" id="date"/>
+                    <label for="date"><i class="icon-calendar-1 icon"></i><span class="value">21/05/2019 - 26/05/2019</span></label>
+                  </div>
+                  <div class="page__table--buttons">
+                    <button class="btn btn-primary" type="submit">Применить</button>
+                    <button class="btn btn-outlined" type="button">Очистить</button>
+                  </div>
+                  <div class="page__table--settings">
+                    <div class="settings-item setting-trigger"><a class="page__table--settings-link" href="#"><span>Настроить поля</span>
+                        <div class="icon-grid icon"></div></a>
+                      <div class="table-settings">
+                        <div class="triangle-with-shadow"></div>
+                        <div class="settings-wrapper">
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="table_date" value="table_date"/>
+                            <label for="table_date">Дата
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="redirect" value="redirect"/>
+                            <label for="redirect">Переходы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="uniques" value="uniques"/>
+                            <label for="uniques">Уники
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="shows" value="shows"/>
+                            <label for="shows">Показы
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="clicks" value="clicks"/>
+                            <label for="clicks">Клики
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="ctr" value="ctr"/>
+                            <label for="ctr">CTR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="leads" value="leads"/>
+                            <label for="leads">Лиды
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="cr" value="cr"/>
+                            <label for="cr">CR
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="approval" value="approval"/>
+                            <label for="approval">Аппрув
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="income" value="income"/>
+                            <label for="income">Доход
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="domonetization" value="domonetization"/>
+                            <label for="domonetization">Домонетизировано
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                          <div class="table-settings__item">
+                            <input type="checkbox" name="table_settings" id="waiting" value="waiting"/>
+                            <label for="waiting">В ожидании
+                              <div class="check"><i class="icon-ok icon"></i></div>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="settings-item"><a class="teasers__table--settings-link export" href="#"><span>Экспорт CSV / Excel</span>
+                        <div class="icon-export icon"></div></a></div>
+                  </div>
+                </div>
+              </form>
+              <div class="table-wrapper">
+                <table class="news__table">
+                  <thead>
+                    <tr>
+                      <th class="js-sort active"><span>АКТИВНОСТЬ</span><i class="icon-sort icon"></i></th>
+                      <th class="js-sort"><span>Дата</span><i class="icon-sort icon"></i></th>
+                      <th class="js-sort"><span>ID Новости</span></th>
+                      <th class="js-sort">Изображение</th>
+                      <th>Заголовок<i class="icon-sort icon"></i></th>
+                      <th>категориЯ<i class="icon-sort icon"></i></th>
+                      <th>Язык<i class="icon-sort icon"></i></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="active">
+                        <div class="active-tag non-active">Актив.</div>
+                      </td>
+                      <td>11.06.2021</td>
+                      <td>20425880</td>
+                      <td class="table-image">
+                        <picture>
+                          <source srset="assets/img/teaser__image1.webp" type="image/webp"/>
+                          <source srset="assets/img/teaser__image1.jpg" type="image/jpeg"/><img src="assets/img/teaser__image1.jpg" alt=""/>
+                        </picture>
+                      </td>
+                      <td class="table-title">Российский возбудитель оказался дешевле и мощнее самой виагры в 78</td>
+                      <td>
+                        <div class="category-tag">
+                          <div class="category category-health">Здоровье</div>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/ru-flag.svg"/></td>
+                      <td>
+                        <div class="actions"><a class="actions__item preview" href="#"><i class="icon-eye icon"></i></a><a class="actions__item edit" href="#"><i class="icon-edit icon"></i></a><a class="actions__item archive" href="#"><i class="icon-archive icon"></i></a></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="active">
+                        <div class="active-tag active">Не актив.</div>
+                      </td>
+                      <td>21.07.2021</td>
+                      <td>27854125</td>
+                      <td class="table-image">
+                        <picture>
+                          <source srset="assets/img/teaser__image2.webp" type="image/webp"/>
+                          <source srset="assets/img/teaser__image2.jpg" type="image/jpeg"/><img src="assets/img/teaser__image2.jpg" alt=""/>
+                        </picture>
+                      </td>
+                      <td class="table-title">Что ждет россиян в октябре</td>
+                      <td>
+                        <div class="category-tag">
+                          <div class="category category-politics">Политика</div>
+                        </div>
+                      </td>
+                      <td><img src="assets/img/ru-flag.svg"/></td>
+                      <td>
+                        <div class="actions"><a class="actions__item preview" href="#"><i class="icon-eye icon"></i></a><a class="actions__item edit" href="#"><i class="icon-edit icon"></i></a><a class="actions__item archive" href="#"><i class="icon-archive icon"></i></a></div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
             <div class="pagination-wrapper">
               <div class="record-count"><span>Отобразить по</span>
-                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-dir icon"></i></div>
+                <div class="record-count__value"> <span class="value">10</span><i class="icon-down-open-mini icon"></i></div>
                 <ul class="record-count__options">
                   <div class="triangle-with-shadow"></div>
                   <li class="record-count__option" rel="5">5</li>
@@ -239,8 +306,8 @@
                 </ul>
               </div>
               <ul class="pagination">
-                <li class="pagination__item"><a href=""> <i class="icon-to-start"></i></a></li>
-                <li class="pagination__item"><a href=""><i class="icon-left-open"></i></a></li>
+                <li class="pagination__item"><a href=""> <i class="icon-start"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-prev"></i></a></li>
                 <li class="pagination__item"><a class="_active" href="">1</a></li>
                 <li class="pagination__item"><a href="">2</a></li>
                 <li class="pagination__item"><a href="">3</a></li>
@@ -248,8 +315,8 @@
                 <li class="pagination__item"><a href="">5</a></li>
                 <li class="pagination__item"><a href="">...</a></li>
                 <li class="pagination__item"><a href="">10</a></li>
-                <li class="pagination__item"><a href=""><i class="icon-right-open"></i></a></li>
-                <li class="pagination__item"><a href=""><i class="icon-to-end"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-next"></i></a></li>
+                <li class="pagination__item"><a href=""><i class="icon-end"></i></a></li>
               </ul>
             </div>
           </div>

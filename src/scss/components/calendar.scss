@@ -1,6 +1,6 @@
 .calendar-trigger {
-    margin-right: 7px;
-    flex: 0 0 200px;
+    //margin-right: 7px;
+    flex: 0 0 285px;
 
     input {
         width: 0;
@@ -13,26 +13,32 @@
     label {
         width: 100%;
         height: 100%;
-        padding: 15px 10px;
         background: $color-white;
-        border: 1px solid $color-gray-dark;
         cursor: pointer;
-        border-radius: 8px;
         overflow: hidden;
         white-space: nowrap;
+        font-size: 18px;
+        line-height: 32px;
         text-overflow: ellipsis;
-        font-size: 14px;
-        line-height: 16px;
         display: flex;
         align-items: center;
+        padding: 8px 32px 8px 16px;
+        //width: 100%;
+        font-weight: 500;
+        border: 1px solid rgba(83, 120, 251, 0.25);
+        border-radius: 4px;
     }
 
     .value {
         text-transform: capitalize;
+        opacity: .4;
     }
 
     &._active {
         color: $color-blue-light;
+        .value {
+            opacity: 1;
+        }
     }
 }
 

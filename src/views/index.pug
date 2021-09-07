@@ -12,7 +12,8 @@ block config
 block content
     .content
         .content__inner
-            h1.page-title=pageName
+            .top-content
+                h1.page-title=pageName
             .account-info__wrapper
                 .account-info.large
                     +infoItem(
@@ -147,29 +148,4 @@ block content
                             href="#"
                             title="Путин больше не скрывает статус"
                             tag="Политика"
-                        )
-                        +news-item(
-                            href="#"
-                            title="Месси наконец-то дебютировал за «ПСЖ» в матче..."
-                            tag="Спорт"
-                        )
-                        +news-item(
-                            href="#"
-                            title="С чем есть дыню категорически нельзя..."
-                            tag="Здоровье"
-                        )
-                        +news-item(
-                            href="#"
-                            title="Месси наконец-то дебютировал за «ПСЖ» в матче..."
-                            tag="Спорт"
-                        )
-                        +news-item(
-                            href="#"
-                            title="Путин больше не скрывает статус"
-                            tag="Политика"
-                        )
-                        +news-item(
-                            href="#"
-                            title="С чем есть дыню категорически нельзя..."
-                            tag="Здоровье"
                         )

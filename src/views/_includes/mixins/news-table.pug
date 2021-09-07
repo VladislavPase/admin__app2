@@ -1,0 +1,47 @@
+mixin news-table()
+    table.news__table
+        thead
+            tr
+                th.js-sort.active
+                    span АКТИВНОСТЬ
+                    i.icon-sort.icon
+                th.js-sort
+                    span Дата
+                    i.icon-sort.icon
+                th.js-sort
+                    span ID Новости
+                th.js-sort Изображение
+                th Заголовок
+                    i.icon-sort.icon
+                th категориЯ
+                    i.icon-sort.icon
+                th Язык
+                    i.icon-sort.icon
+                th
+        tbody
+            - let arr = attributes.data
+            each elem in arr
+                tr
+                    td.active
+                        .active-tag(class=elem.isActive ? 'non-active' : 'active')=elem.isActive ? 'Актив.' : 'Не актив.'
+                    td=elem.date
+                    td=elem.id
+                    td.table-image
+                        picture
+                            source(srset=elem.img + ".webp" type="image/webp")
+                            source(srset=elem.img + ".jpg" type="image/jpeg")
+                            img(src=elem.img + ".jpg" alt="")
+                    td.table-title=elem.title
+                    td
+                        .category-tag
+                            .category(class=elem.category_className)=elem.category
+                    td
+                        img(src="assets/img/" + elem.lang + "-flag.svg")
+                    td
+                        .actions
+                            a(href="#").actions__item.preview
+                                i.icon-eye.icon
+                            a(href="#").actions__item.edit
+                                i.icon-edit.icon
+                            a(href="#").actions__item.archive
+                                i.icon-archive.icon

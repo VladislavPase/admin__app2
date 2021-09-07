@@ -2,89 +2,164 @@ extends _includes/layout
 include _includes/mixins/filter
 include _includes/mixins/input-search
 include _includes/mixins/calendar
+include _includes/mixins/tableSettings
+include _includes/mixins/news-table
 
 block config
     - var pagetitle = 'Новости'
-    - var bodyClass = 'news'
+    - var bodyClass = 'news page'
     - var pageName = 'Новости'
     - var name = 'news'
-    - var headerIcon = 'icon-news-icon'
 
 block content
     .content
         .content__inner
-            form.news__form
-                .news__form--top
-                    +inputSearch(
-                        id="news_search"
-                        name="news_search"
-                        label="Введите фрагмент заголовка новости"
-                    ) 
-                    .search-info
-                        p.search-info__title Вы недавно искали
-                        a(href="#").search-info__text.link Новый Мерседес блеснул в Париже
-                .news__form--bottom
-                    +calendar()
-                    +filter(
-                        title="Маркер категории"
-                        type="checkbox"
-                        options=[
+            .top-content
+                h1.page-title=pageName
+                button.btn.btn-secondary + Добавить новость
+            .news__form--top
+                .fieldset.input-search
+                    i.icon-search.icon
+                    input.input(name="news_search" type="text" id="news_search")
+                    label.label(for="news_search") Поиск
+                .search-info
+                    p.search-info__title Вы недавно искали
+                    a.search-info__text.link(href="#") Новый Мерседес блеснул в Париже
+            .page__table
+                form.page__table--form()
+                    .page__table--filters
+                        +filter(
+                            title="Все категории"
+                            type="checkbox"
+                            options=[
+                                {
+                                    id: 123123123,
+                                    option: 'Политика',
+                                    value: 'politics'
+                                },
+                                {
+                                    id: 12312,
+                                    option: 'Здоровье',
+                                    value: 'health'
+                                },
+                                {
+                                    id: 123125,
+                                    option: 'Шоу-бизнес',
+                                    value: 'business'
+                                },
+                                {
+                                    id: 123,
+                                    option: 'Спорт',
+                                    value: 'sport'
+                                },
+                                {
+                                    id: 2323,
+                                    option: 'Спецпроекты',
+                                    value: 'projects'
+                                }
+                            ]
+                        )
+                        +calendar()
+                        .page__table--buttons
+                            button(type="submit").btn.btn-primary Применить
+                            button(type="button").btn.btn-outlined Очистить
+                        .page__table--settings
+                            .settings-item.setting-trigger
+                                a(href="#").page__table--settings-link
+                                    span Настроить поля
+                                    .icon-grid.icon
+                                .table-settings
+                                    .triangle-with-shadow
+                                    .settings-wrapper
+                                        +tableSetting(
+                                            title="Дата"
+                                            id="table_date"
+                                            value="table_date"
+                                        )
+                                        +tableSetting(
+                                            title="Переходы"
+                                            id="redirect"
+                                            value="redirect"
+                                        )
+                                        +tableSetting(
+                                            title="Уники"
+                                            id="uniques"
+                                            value="uniques"
+                                        )
+                                        +tableSetting(
+                                            title="Показы"
+                                            id="shows"
+                                            value="shows"
+                                        )
+                                        +tableSetting(
+                                            title="Клики"
+                                            id="clicks"
+                                            value="clicks"
+                                        )
+                                        +tableSetting(
+                                            title="CTR"
+                                            id="ctr"
+                                            value="ctr"
+                                        )
+                                        +tableSetting(
+                                            title="Лиды"
+                                            id="leads"
+                                            value="leads"
+                                        )
+                                        +tableSetting(
+                                            title="CR"
+                                            id="cr"
+                                            value="cr"
+                                        )
+                                        +tableSetting(
+                                            title="Аппрув"
+                                            id="approval"
+                                            value="approval"
+                                        )
+                                        +tableSetting(
+                                            title="Доход"
+                                            id="income"
+                                            value="income"
+                                        )
+                                        +tableSetting(
+                                            title="Домонетизировано"
+                                            id="domonetization"
+                                            value="domonetization"
+                                        )
+                                        +tableSetting(
+                                            title="В ожидании"
+                                            id="waiting"
+                                            value="waiting"
+                                        )
+                            .settings-item
+                                a(href="#").teasers__table--settings-link.export
+                                    span Экспорт CSV / Excel
+                                    .icon-export.icon
+                .table-wrapper
+                    +news-table(
+                        data=[
                             {
-                                id: 123123123,
-                                option: 'Маркер категории1',
-                                value: 'category_1'
+                                isActive: true,
+                                date: '11.06.2021',
+                                id: '20425880',
+                                img: 'assets/img/teaser__image1',
+                                title: 'Российский возбудитель оказался дешевле и мощнее самой виагры в 78',
+                                category: 'Здоровье',
+                                category_className: 'category-health',
+                                lang: 'ru',
                             },
                             {
-                                id: 12312,
-                                option: 'Маркер категории2',
-                                value: 'category_2'
-                            },
-                            {
-                                id: 123125,
-                                option: 'Маркер категории3',
-                                value: 'category_3'
+                                isActive: false,
+                                date: '21.07.2021',
+                                id: '27854125',
+                                img: 'assets/img/teaser__image2',
+                                title: 'Что ждет россиян в октябре',
+                                category: 'Политика',
+                                category_className: 'category-politics',
+                                lang: 'ru',
                             }
                         ]
                     )
-                    button(type="submit").btn.btn-primary ПРИМЕНИТЬ
-                    button(type="button").btn.btn-outlined ОЧИСТИТЬ
-            .table-wrapper.news__table
-                table
-                    thead
-                        tr
-                            th Дата новости
-                                .sort-icons
-                                    i.icon-up-dir.icon._up
-                                    i.icon-down-dir.icon._down
-                            th Картинка
-                            th Заголовок статьи
-                                .sort-icons
-                                    i.icon-up-dir.icon
-                                    i.icon-down-dir.icon
-                            th Маркер категории
-                                .sort-icons
-                                    i.icon-up-dir.icon
-                                    i.icon-down-dir.icon
-                            th Язык
-                            th 
-                    tbody
-                        - for (let i = 0; i < 5; i++)
-                            tr
-                                td 12.02.2021
-                                td.news__table--image 
-                                    picture
-                                        source(srcset="assets/img/news__image.webp" type="image/webp")
-                                        source(srcset="assets/img/news__image.jpg" type="image/jpeg")
-                                        img(src="assets/img/news__image.jpg" alt="news image")
-                                td.news__table--h
-                                    | ШОК! Агутин опять нажрался и разбил весь отель. СРочно, Ужас и трепет.
-                                td.news__table--mark
-                                    .category-mark ШОУ-БИЗНЕС
-                                td.news__table--lang
-                                    img(src="assets/img/ru-flag.svg" alt="RU")
-                                td.news__table--action
-                                    a(value=i href="https://izvestiya24.ru/1451" target="_blank").action-elem
-                                        i.icon-eye
             .pagination-wrapper
                 include _includes/blocks/renderCount
                 include _includes/blocks/pagination

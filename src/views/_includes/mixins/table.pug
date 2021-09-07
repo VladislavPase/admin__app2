@@ -2,86 +2,51 @@ mixin table()
     table
         thead
             tr
-                th Дата
-                    .sort-icons
-                        i.icon-up-dir.icon._up
-                        i.icon-down-dir.icon._down
-                th Переходы
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Уники
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Показы
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Клики
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th CTR, %
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th EPC
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Лиды
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th CR, %
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th % Аппрува
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Доход
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th Домонетизизация
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
-                th В ожидании
-                    .sort-icons
-                        i.icon-up-dir.icon
-                        i.icon-down-dir.icon
+                th.js-sort
+                    span Дата
+                    i.icon-sort.icon
+                th.js-sort 
+                    span ID тизера
+                th.js-sort Изображение
+                th Заголовок
+                    i.icon-sort.icon
+                th категориЯ
+                    i.icon-sort.icon
+                th Оффер
+                    i.icon-sort.icon
+                th Рекламодатель
+                    i.icon-sort.icon
+                th Язык
+                    i.icon-sort.icon
+                th Размер
+                    i.icon-sort.icon
+                th
         tbody
-            - for (let i = 0; i < 5; i++)
+            - let arr = attributes.data
+            each elem in arr
                 tr
-                    td 12.02.2021
-                    td.redirect-value 10
-                    td.unique-value 10к
-                    td.shows-value 100к
-                    td.clicks-value 250
-                    td.ctr-value 0
-                    td.epc-value 0
-                    td.leads-value 100
-                    td.cr-value 20
-                    td.aproove-value 25
-                    td.income-value 0
-                    td.domo-value 0
-                    td.waiting-value 0
-        tfoot
-            tr
-                td Всего
-                td.redirect-total 10
-                td.unique-total 10к
-                td.shows-total 100к
-                td.clicks-total 250
-                td.ctr-total 0
-                td.epc-total 0
-                td.leads-total 100
-                td.cr-total 20
-                td.aproove-total 25
-                td.income-total 0
-                td.domo-total 0
-                td.waiting-total 0
+                    td=elem.date
+                    td=elem.id
+                    td.table-image
+                        picture
+                            source(srset=elem.img + ".webp" type="image/webp")
+                            source(srset=elem.img + ".jpg" type="image/jpeg")
+                            img(src=elem.img + ".jpg" alt="")
+                    td.table-title=elem.title
+                    td 
+                        .category-tag
+                            .category(class=elem.category_className)=elem.category
+                    td Неокард&nbsp;(0₽)
+                    td 
+                        a(href="").link=elem.reclama
+                    td 
+                        img(src="assets/img/" + elem.lang + "-flag.svg")
+                    td=elem.size
+                    td 
+                        .actions
+                            a(href="#").actions__item.preview
+                                i.icon-eye.icon
+                            a(href="#").actions__item.edit
+                                i.icon-edit.icon
+                            a(href="#").actions__item.archive
+                                i.icon-archive.icon
